@@ -39,6 +39,9 @@ La maquetación se realiza utilizando **HTML** y **CSS**, mientras que **JavaScr
 ### Personajes
 ![Characters page](./Readme_images/Characters%20page-4.png "Characters page")
 
+### Personajes info
+![Characters info page](./Readme_images/character%20image-5.png "Characters info page")
+
 ### Naves
 ![Ships page](./Readme_images/ships%20page-6.png "Ships page")
 
@@ -48,7 +51,9 @@ La maquetación se realiza utilizando **HTML** y **CSS**, mientras que **JavaScr
 ### Movies
 ![Movies page](./Readme_images/movies%20page-8.png "Movies page")
 
+### Movies info
 ![Movie info](./Readme_images/movie%20info-9.png "Movie info")
+
 
 
 ## Estructura del Proyecto
