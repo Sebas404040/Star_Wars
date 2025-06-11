@@ -27,6 +27,28 @@ El diseño de la Fan Page de Star Wars se centra en ofrecer una experiencia visu
 
 La maquetación se realiza utilizando **HTML** y **CSS**, mientras que **JavaScript** se emplea para agregar interactividad y dinamismo al sitio.
 
+### Home
+![Logo de Star Wars](./Readme_images/Home-1.png "Home")
+
+### Home - 2
+![Logo de Star Wars](./Readme_images/best%20characters-2.png "Best characters")
+
+### Home - 3
+![Logo de Star Wars](./Readme_images/Description%20Home-3.png "Description home")
+
+### Personajes
+![Logo de Star Wars](./Readme_images/Characters%20page-4.png "Characters page")
+
+### Naves
+![Logo de Star Wars](./Readme_images/ships%20page-6.png "Ships page")
+
+### Nave info
+![Logo de Star Wars](./Readme_images/ship%20info-7.png "Nave info")
+
+### Movies
+![Logo de Star Wars](./Readme_images/movies%20page-8.png "Movies page")
+
+
 ## Estructura del Proyecto
 
 Star_Wars/
