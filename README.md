@@ -34,19 +34,21 @@ La maquetación se realiza utilizando **HTML** y **CSS**, mientras que **JavaScr
 ![Logo de Star Wars](./Readme_images/best%20characters-2.png "Best characters")
 
 ### Home - 3
-![Logo de Star Wars](./Readme_images/Description%20Home-3.png "Description home")
+![Description home](./Readme_images/Description%20Home-3.png "Description home")
 
 ### Personajes
-![Logo de Star Wars](./Readme_images/Characters%20page-4.png "Characters page")
+![Characters page](./Readme_images/Characters%20page-4.png "Characters page")
 
 ### Naves
-![Logo de Star Wars](./Readme_images/ships%20page-6.png "Ships page")
+![Ships page](./Readme_images/ships%20page-6.png "Ships page")
 
 ### Nave info
-![Logo de Star Wars](./Readme_images/ship%20info-7.png "Nave info")
+![Nave info](./Readme_images/ship%20info-7.png "Nave info")
 
 ### Movies
-![Logo de Star Wars](./Readme_images/movies%20page-8.png "Movies page")
+![Movies page](./Readme_images/movies%20page-8.png "Movies page")
+
+![Movie info](./Readme_images/movie%20info-9.png "Movie info")
 
 
 ## Estructura del Proyecto
