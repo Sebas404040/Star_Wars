@@ -1,7 +1,21 @@
 /*CSS para la index page*/
 
+@font-face {
+    font-family: "Star Jedi";
+    src: url("../fonts/SF\ Distant\ Galaxy\ Italic.ttf") format(opentype);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "AutoWide";
+    src: url("../fonts/Audiowide-Regular.ttf") format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}
+
 #background-video {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -11,5 +25,39 @@
 }
 
 #home_image {
-    width: 90px;
+    width: 9%;
 }
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: aliceblue;
+    font-size: 1.5rem;
+    font-family: "Star jedi";
+}
+
+.opciones {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#titulo_general {
+    font-family: "Star Jedi";
+    color: rgb(255, 213, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10rem;
+    margin-top: 15%;
+    margin-bottom: 25%;
+}
+
+.best_characters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
