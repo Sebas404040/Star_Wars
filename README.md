@@ -29,15 +29,17 @@ La maquetación se realiza utilizando **HTML** y **CSS**, mientras que **JavaScr
 
 ### Home
 ![Logo de Star Wars](./Readme_images/Home-1.png "Home")
-
+- Desde la pagina Home se propone un inicio con cuatro opciones distintas en las cuales el usuario podrá acceder a nuestra propuesta para que conozcan más acerca de la saga Star Wars, se trata de proponer en el diseño algo minimalista para hacer de la experiencia algo cómodo y accesible.
 ### Home - 2
 ![Logo de Star Wars](./Readme_images/best%20characters-2.png "Best characters")
+- En esta sección quisimos incluir un apartado donde se resalten los personajes más importantes de la saga y que también planteemos una opinión de los que a nuestro parecer tienen los desarrollos de personaje más interesantes y por eso decidimos dedicarles este apartado.
 
 ### Home - 3
 ![Description home](./Readme_images/Description%20Home-3.png "Description home")
-
+- Por ultimo en este apartado de Home, quisimos agregar una cita para los usuarios en los que explicitamente les decimos lo que van a encontrar en este aplicativo web e incluimos un diseño acorde a la temática.
 ### Personajes
 ![Characters page](./Readme_images/Characters%20page-4.png "Characters page")
+
 
 ### Naves
 ![Ships page](./Readme_images/ships%20page-6.png "Ships page")
