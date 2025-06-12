@@ -1,5 +1,9 @@
 /*CSS para la index page*/
 
+body {
+    background-color: black;
+}
+
 @font-face {
     font-family: "Star Jedi";
     src: url("../fonts/SF\ Distant\ Galaxy\ Italic.ttf") format(opentype);
@@ -15,11 +19,11 @@
 }
 
 #background-video {
-    position: absolute;
+    position: absolute; 
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100%; 
+    height: 100vh; 
     object-fit: cover; 
     z-index: -1; 
 }
@@ -47,17 +51,140 @@ nav {
 #titulo_general {
     font-family: "Star Jedi";
     color: rgb(255, 213, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 10rem;
-    margin-top: 15%;
-    margin-bottom: 25%;
+    text-align: center;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+main {
+    position: relative;
+    z-index: 1; 
+    margin-top: 100vh;
 }
 
 .best_characters {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; 
+    width: 100%;
+    margin: 0; 
+    box-sizing: border-box;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1; 
+    padding: 10%;
+}
+
+.section_bestcharacter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    position: relative; 
+    flex: 1;
+    text-align: end; 
+}
+
+#DV_button, #LS_button, #M_button {
+    padding: 3%;
+    position: absolute;  
+    color: white;
+    font-family: "Star Jedi";
+    border-radius: 10px;
+    background-color: black;
+    z-index: 2; 
+}
+
+#DV_button {
+    box-shadow: 0px 0px 10px red;
+    border: 4px solid red;
+}
+
+#LS_button {
+    box-shadow: 0px 0px 10px rgb(0, 55, 255);
+    border: 4px solid rgb(0, 55, 255);
+}
+
+#M_button {
+    box-shadow: 0px 0px 10px rgb(28, 130, 0);
+    border: 4px solid rgb(45, 128, 0);
+}
+
+
+.best_characters_image {
+    max-width: 100%;
+    height: auto;
+    position: relative; 
+    z-index: 1; 
+}
+
+.home_invitation {
+    padding: 2%;
+    color: white;
+    background-color: rgb(31, 28, 28);
+    margin: 2%;
+    font-family: "Autowide";
+    background-image: url("../photos/Fondo\ Estrellas-3.png");
+}
+
+#imagenes_home {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
+
+#home_planet {
+    width: 30%;
+}
+
+#introduccion_home {
+    background-color: black;
+}
+
+h1 {
+    margin-top: 4%;
+    color: white;
+    text-align: center;
+    font-family: "Star Jedi";
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+#DV_button, #LS_button, #M_button {
+    transition: transform 0.5s ease;
+}
+
+#DV_button:hover, #LS_button:hover, #M_button:hover {
+    transform: scale(1.1);
+}
+
+#button_explorar {
+    font-family: "Star Jedi";
+    background-color: black;
+    color: aliceblue;
+    border: 2px solid yellow;
+    border-radius: 3px;
+    box-shadow: 0px 0px 20px yellow;
+    width: 20%;
+    margin-left: 40%;
+    font-size: 1rem;
+}
+
+/*CSS para la characters page*/
 
