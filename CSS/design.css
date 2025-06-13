@@ -425,6 +425,30 @@ h3 {
     width: 100%;
 }
 
+/* CSS para la Movie info page */
+
+#info_pelicula {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.titulo_pelicula {
+    font-family: "Star Jedi";
+    text-align: center;
+    color: white;
+}
+
+#descripcionInfo_pelicula {
+    font-family: "AutoWide";
+    text-align: center;
+    color: white;
+}
+
+#imagen_descripcion_pelicula {
+    width: 50%;
+}
 
 
 
