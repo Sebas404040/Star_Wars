@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Informacion del personaje</title>
-</head>
-<body>
-    <main>
-        <div id="fondo_perfil_personaje">
-            <!--Aqui va la imagen de fondo-->
-            <section>
-                 <!--imagen del personaje-->
-                <img src="" alt="" id="imagen_personaje">
-                <article id="stats">
-                    <h2 id="nombre_personaje">nombre_personaje</h2>
-                <div class="stat">
-                  <span>Poder en la fuerza:</span>
-                  <div class="bar-container">
-                    <div class="bar" style="width: 85%;"></div>
-                  </div>
+    <link rel="stylesheet" href="../CSS/design.css">
+  </head>
+  <body>
+    <img src="../icons/boton_volver.png" alt="boton_volver"
+      class="boton_volver">
+    <main id="info_personaje">
+      <img src="../characters/Dart Vader.png" alt="Dart Vader"
+        class="imagen_personaje_info">
+      <div>
+        <section>
+          <div class="card">
+            <article id="stats">
+              <h2 id="nombre_personaje">nombre_personaje</h2>
+              <div class="stat">
+                <span>Poder en la fuerza:</span>
+                <div class="bar-container">
+                  <div class="bar" style="width: 85%;"></div>
                 </div>
-            
-                <div class="stat">
-                  <span>Nivel de amenaza:</span>
-                  <div class="bar-container">
-                    <div class="bar" style="width: 70%;"></div>
-                  </div>
+              </div>
+              <div class="stat">
+                <span>Nivel de amenaza:</span>
+                <div class="bar-container">
+                  <div class="bar" style="width: 70%;"></div>
                 </div>
-            
-                <div class="stat">
-                  <span>Dominio del sable láser:</span>
-                  <div class="bar-container">
-                    <div class="bar" style="width: 90%;"></div>
-                  </div>
+              </div>
+              <div class="stat">
+                <span>Dominio del sable láser:</span>
+                <div class="bar-container">
+                  <div class="bar" style="width: 90%;"></div>
                 </div>
-            
-                <div class="stat">
-                  <span>Estrategia táctica:</span>
-                  <div class="bar-container">
-                    <div class="bar" style="width: 40%; background-color: #ff4b4b;"></div>
-                  </div>
+              </div>
+              <div class="stat">
+                <span>Estrategia táctica:</span>
+                <div class="bar-container">
+                  <div class="bar"
+                    style="width: 40%; background-color: #ff4b4b;"></div>
                 </div>
-                </article>
-            </section>
-        </div>
-        <section id="contenedor_biografia">
-            <p id="biografia_personaje">
-
-            </p>
+              </div>
+            </article>
+          </div>
         </section>
+      </div>
+      <section id="contenedor_biografia">
+        <p id="biografia_personaje">
+        </p>
+      </section>
     </main>
-</body>
+  </body>
 </html>
