@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>información de la nave</title>
+    <link rel="stylesheet" href="../CSS/design.css">
 </head>
 <body>
-    <img src="../icons/boton_volver.png" alt="boton_volver">
-    <section>
-        <h1 id="nombre_nave">Nombre_nave</h1>
+    <img src="../icons/boton_volver.png" alt="boton_volver" class="boton_volver">
+    <section class="contenedor_naves_info">
         <div id="imagen_stats">
-            <img src="" alt="" id="imagen_nave">
+            <img src="../ships/A-Wing.png" alt="" class="imagen_nave">
+        </div>
+            <div class="card">
             <section id="stats_ships">
                 <div class="stat_ship">
+                    <h1>Nombre_nave</h1>
                     <span>Velocidad maxima:</span>
                     <div class="bar-container">
                       <div class="bar" style="width: 85%;"></div>
@@ -39,8 +42,8 @@
                       <div class="bar" style="width: 40%; background-color: #ff4b4b;"></div>
                     </div>
                 </div>
-                  </article>
             </section>
+            </div>
         </div>
         <section id="descripcion_nave">
             <p id="descripcion">

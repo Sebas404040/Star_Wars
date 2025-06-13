@@ -379,6 +379,26 @@ h3 {
     align-items: center;
 }
 
+/*CSS para la Ship info page */
+
+.imagen_nave {
+    width: 70%;
+}
+
+#stats_ships {
+  display: flex;
+  flex-direction: column;  
+  gap: 30px;
+  font-family: "AutoWide";
+}
+
+.contenedor_naves_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 
