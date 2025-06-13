@@ -29,7 +29,8 @@ body {
 }
 
 #home_image {
-    width: 9%;
+    width: 20%;
+    padding: 10px;
 }
 
 nav {
@@ -450,6 +451,15 @@ h3 {
     width: 50%;
 }
 
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#fondo_ship_info {
+    background-image: url("../photos/Fondo\ Estrellas-3.png");
+    background-repeat: no-repeat;
+}
 
 
 
