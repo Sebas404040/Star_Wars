@@ -402,7 +402,7 @@ h3 {
 
 #peliculas {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr)); 
     gap: 50px; 
     padding: 20px;
     color: white;
@@ -419,6 +419,10 @@ h3 {
     align-items: center;
     border: 4px solid rgb(255, 213, 0);
     box-shadow: 0px 0px 16px rgb(255, 213, 0);
+}
+
+.imagen_peliculas {
+    width: 100%;
 }
 
 
