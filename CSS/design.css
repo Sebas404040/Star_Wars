@@ -236,6 +236,25 @@ h3 {
     align-items: flex-start; 
 }
 
+#filtro_Star_Wars {
+    width: 40px;
+    margin-top: auto;
+}
+
+.buscar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.fondo_personajes {
+    background-image: url("../photos/Fondo\ personaje1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 
 
 
