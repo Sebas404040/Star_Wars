@@ -1,0 +1,77 @@
+[
+    {
+      "nombre": "Millennium Falcon",
+      "descripcion": "Nave de carga modificada, famosa por su velocidad y pilotada por Han Solo y Chewbacca. Crucial en las batallas de la Rebelión.",
+      "imagen": "../ships/Millennium Falcon.png"
+    },
+    {
+      "nombre": "X-Wing",
+      "descripcion": "Caza estelar de la Alianza Rebelde, conocido por su maniobrabilidad y potencia de fuego. Utilizado en ataques contra la flota imperial.",
+      "imagen": "../ships/X-Wing.png"
+    },
+    {
+      "nombre": "TIE Fighter",
+      "descripcion": "Caza estelar de la flota imperial, caracterizado por su distintivo diseño en forma de alas. Utilizado por los pilotos imperiales en misiones de combate.",
+      "imagen": "../ships/TIE Fighter.png"
+    },
+    {
+      "nombre": "Slave I (Firespray-31)",
+      "descripcion": "Nave de caza y transporte utilizada por el cazarrecompensas Boba Fett. Conocida por su diseño distintivo y capacidad para realizar misiones de captura.",
+      "imagen": "../ships/Slave I (Firespray-31).png"
+    },
+    {
+      "nombre": "Star Destroyer",
+      "descripcion": "Nave capital de la flota imperial, imponente y poderosa. Utilizada para mantener el control del espacio y aplastar a la Rebelión.",
+      "imagen": "../ships/Star Destroyer.png"
+    },
+    {
+      "nombre": "Death Star (Estrella de la Muerte)",
+      "descripcion": "Estación espacial y arma de destrucción masiva de la flota imperial. Capaz de destruir planetas enteros con su superláser.",
+      "imagen": "../ships/Death Star (Estrella de la Muerte).png"
+    },
+    {
+      "nombre": "Y-Wing",
+      "descripcion": "Caza bombardero de la Alianza Rebelde, utilizado para misiones de ataque a objetivos terrestres e instalaciones imperiales. Conocido por su resistencia y potencia de fuego.",
+      "imagen": "../ships/Y-Wing.png"
+    },
+    {
+      "nombre": "A-Wing",
+      "descripcion": "Caza estelar ligero de la Alianza Rebelde, diseñado para velocidad y maniobrabilidad. Utilizado en misiones de reconocimiento y ataque rápido.",
+      "imagen": "../ships/A-Wing.png"
+    },
+    {
+      "nombre": "B-Wing",
+      "descripcion": "Caza bombardero de la Alianza Rebelde, especializado en ataques a naves capitales. Conocido por su diseño único y capacidad para realizar maniobras complejas.",
+      "imagen": "../ships/B-Wing.png"
+    },
+    {
+      "nombre": "TIE Interceptor",
+      "descripcion": "Versión mejorada del TIE Fighter, con mayor velocidad y maniobrabilidad. Utilizado por pilotos imperiales de élite en misiones de combate.",
+      "imagen": "../ships/TIE Interceptor.png"
+    },
+    {
+      "nombre": "Imperial Shuttle (Lambda-class)",
+      "descripcion": "Nave de carga modificada, famosa por su velocidad y pilotada por Han Solo y Chewbacca. Crucial en las batallas de la Rebelión.",
+      "imagen": "../ships/Imperial Shuttle (Lambda-class).png"
+    },
+    {
+      "nombre": "U-Wing",
+      "descripcion": "Nave de transporte y apoyo aéreo de la Alianza Rebelde, utilizada para misiones de infiltración y extracción. Conocida por su capacidad para transportar tropas y suministros.",
+      "imagen": "../ships/U-Wing.png"
+    },
+    {
+      "nombre": "Jedi Starfighter (Delta-7)",
+      "descripcion": "Caza estelar utilizado por los Jedi durante las Guerras Clon. Conocido por su agilidad y capacidad para realizar maniobras evasivas. Pilotado por Jedi como Anakin Skywalker y Obi-Wan Kenobi.",
+      "imagen": "../ships/Jedi Starfighter (Delta-7).png"
+    },
+    {
+      "nombre": "Naboo N-1 Starfighter",
+      "descripcion": "Caza estelar utilizado por la Reina Amidala y la Guardia Real de Naboo. Conocido por su diseño elegante y velocidad. Utilizado en la defensa de Naboo contra la invasión de la Federación de Comercio.",
+      "imagen": "../ships/Naboo N-1 Starfighter.png"
+    },
+    {
+      "nombre": "Razor Crest",
+      "descripcion": "Nave de transporte y caza utilizada por el cazarrecompensas Din Djarin (The Mandalorian). Conocida por su resistencia y capacidad para realizar misiones de captura y transporte de prisioneros.",
+      "imagen": "../ships/Razor Crest.png"
+    }
+  ]
