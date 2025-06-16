@@ -1,0 +1,37 @@
+[
+    {
+      "nombre": "Episodio IV: Una Nueva Esperanza",
+      "anio": 1977,
+      "imagen": "../Movies/A New Hope.png"
+    },
+    {
+      "nombre": "Episodio II: El Ataque de los Clones",
+      "anio": 2002,
+      "imagen": "../Movies/Attack of the Clones.png"
+    },
+    {
+      "nombre": "Episodio VI: El Regreso del Jedi",
+      "anio": 1983,
+      "imagen": "../Movies/Return of the Jedi.png"
+    },
+    {
+      "nombre": "Episodio III: La Venganza de los Sith",
+      "anio": 2005,
+      "imagen": "../Movies/Revenge of the Sith.png"
+    },
+    {
+      "nombre": "Episodio V: El Imperio Contraataca",
+      "anio": 1980,
+      "imagen": "../Movies/The Empire Strikes Back.png"
+    },
+    {
+      "nombre": "Episodio VII: El Despertar de la Fuerza",
+      "anio": 2015,
+      "imagen": "../Movies/The Force Awakens.png"
+    },
+    {
+      "nombre": "Episodio I: La Amenaza Fantasma",
+      "anio": 1999,
+      "imagen": "../Movies/The Phantom Menace.png"
+    }
+  ]
