@@ -379,6 +379,16 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+
+
+.imagen_naves {
+    width: 70%;
+    display: block;
+    margin: 0 auto;
 }
 
 /*CSS para la Ship info page */
