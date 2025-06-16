@@ -1,209 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Personajes</title>
-        <link rel="stylesheet" href="../CSS/design.css">
-    </head>
-    <body class="fondo_personajes">
-        <nav>
-            <a href="../index.html"><img src="../icons/Starwars_logo.png" alt="Starwars_logo" id="home_image"></a>
 
-            <section class="opciones">
-                <a href="../index.html"><span>INICIO</span></a>
-                <a href="../HTML/Characters_SW.html"><span>PERSONAJES</span></a>
-                <a href="../HTML/Ships_page.html"><span>NAVES</span></a>
-                <a href="../HTML/movies_page.html"><span>PELICULAS</span></a>
-            </section>
-        </nav>
-        <section class="buscar">
-            <input type="text" class="Barra_busqueda">
-            <img src="../icons/filtro_Star_Wars.png" alt="filtro_Star_Wars" id="filtro_Star_Wars">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes</title>
+    <link rel="stylesheet" href="../CSS/design.css">
+</head>
+
+<body class="fondo_personajes">
+    <nav>
+        <a href="../index.html"><img src="../icons/Starwars_logo.png" alt="Starwars_logo" id="home_image"></a>
+
+        <section class="opciones">
+            <a href="../index.html"><span>INICIO</span></a>
+            <a href="../HTML/Characters_SW.html"><span>PERSONAJES</span></a>
+            <a href="../HTML/Ships_page.html"><span>NAVES</span></a>
+            <a href="../HTML/movies_page.html"><span>PELICULAS</span></a>
         </section>
+    </nav>
+    <section class="buscar">
+        <input type="text" class="Barra_busqueda">
+        <img src="../icons/filtro_Star_Wars.png" alt="filtro_Star_Wars" id="filtro_Star_Wars">
+    </section>
 
-        <section class="Personajes">
+    <characters-sw></characters-sw>
+    <script type="module" src="../JavaScript/characters.js"></script>
+</body>
 
-        <section class="Personaje">
-            <img src="../characters/Dart Vader.png" alt="" class="imagen_personajes">
-            <div class="Personajes_descripcion">
-                <h3>Dart Vader</h3>
-                <p>
-                   Anakin fue un niño esclavo en Tatooine con un talento excepcional en la Fuerza. Entrenado como Jedi, 
-                   luchó en las Guerras Clon y fue considerado el Elegido que traería equilibrio. Sin embargo, sus miedos y el deseo de evitar 
-                   la muerte de Padmé lo llevaron al Lado Oscuro. Convertido en Darth Vader, sirvió al Imperio hasta su redención final por su hijo, Luke.
-                </p>
-            </div>
-        </section>
-
-        <section class="Personaje">
-            <img src="../characters/Luke Skywalker.png" alt="" class="imagen_personajes">
-            <div class="Personajes_descripcion">
-                <h3>Luke Skywalker</h3>
-                <p>
-                 Luke comenzó como un joven soñador en Tatooine y descubrió su verdadero destino como hijo de Anakin Skywalker. 
-                 Fue entrenado por Obi-Wan y Yoda, convirtiéndose en un poderoso Jedi. Se enfrentó a Darth Vader y logró redimirlo, 
-                 restaurando la esperanza en la galaxia. Su legado continuó como maestro en una nueva generación de Jedi.
-                </p>
-            </div>
-        </section>
-
-        <section class="Personaje">
-            <img src="../characters/Leia Organa.png" alt="" class="imagen_personajes">
-            <div class="Personajes_descripcion">
-                <h3>Leia Organa</h3>
-                <p>
-                   Hija de Padmé y Anakin, fue adoptada por la familia real de Alderaan y se convirtió en princesa y líder rebelde. 
-                   Inteligente, firme y valiente, lideró misiones cruciales contra el Imperio. En la trilogía secuela, se convierte 
-                   en General de la Resistencia y muestra su conexión con la Fuerza. Es una figura central tanto política como emocionalmente en la saga.
-                </p>
-            </div>
-        </section>
-
-        <section class="Personaje">
-            <img src="../characters/Han Solo.png" alt="" class="imagen_personajes">
-            <div class="Personajes_descripcion">
-                <h3>Han Solo</h3>
-                <p>
-                    Un contrabandista carismático y piloto del Halcón Milenario, Han Solo se unió a la Rebelión contra el Imperio. 
-                    Su relación con Leia Organa es fundamental en la saga. Aunque inicialmente egoísta, demuestra valentía y lealtad, 
-                    convirtiéndose en un héroe clave en la lucha contra el Imperio y más tarde contra la Primera Orden.
-                </p>
-            </div>
-        </section>
-
-        <section class="Personaje">
-            <img src="../characters/Obi-Wan Kenobi.png" alt="" class="imagen_personajes">
-            <div class="Personajes_descripcion">
-                <h3>Obi-Wan Kenobi</h3>
-                <p>
-                    Un maestro Jedi sabio y experimentado, Obi-Wan fue mentor de Anakin Skywalker y más tarde de su hijo, Luke. 
-                    Su papel es crucial en las Guerras Clon y en la lucha contra el Imperio. Su sacrificio y enseñanzas perduran a lo largo de la saga, 
-                    siendo un símbolo de esperanza y resistencia para los Jedi y la Rebelión.
-                </p>
-            </div>
-        </section>
-
-        <section class="Personaje">
-            <img src="../characters/Yoda.png" alt="" class="imagen_personajes">
-            <div class="Personajes_descripcion">
-                <h3>Yoda</h3>
-                <p>
-                    Un maestro Jedi legendario, Yoda es conocido por su sabiduría y habilidades en la Fuerza. 
-                    Entrenó a generaciones de Jedi, incluido Luke Skywalker. Su pequeño tamaño contrasta con su gran poder y conocimiento. 
-                    Yoda es un símbolo de la lucha por la justicia y la paz en la galaxia, y su legado perdura a través de sus enseñanzas.
-                </p>
-            </div>
-        </section>
-
-        <section class="Personaje">
-            <img src="../characters/Padmé Amidala.png" alt="" class="imagen_personajes">
-            <div class="Personajes_descripcion">
-                <h3>Padmé Amidala</h3>
-                <p>
-                    Reina de Naboo y luego senadora, Padmé Amidala es una líder valiente y decidida. 
-                    Su amor por Anakin Skywalker y su compromiso con la paz la convierten en una figura clave en las Guerras Clon. 
-                    Su trágica muerte marca un punto crucial en la saga, influyendo en el destino de sus hijos y el futuro de la galaxia.
-                </p>
-            </div>
-        </section>
-
-        <section class="Personaje">
-            <img src="../characters/Darth Sidious.png" alt="" class="imagen_personajes">
-            <div class="Personajes_descripcion">
-                <h3>Emperador Palpatine / Darth Sidious</h3>
-                <p>
-                    Un maestro manipulador y oscuro, Palpatine es el arquitecto del ascenso del Imperio. 
-                    Como Darth Sidious, seduce a Anakin al Lado Oscuro y busca destruir a los Jedi. 
-                    Su astucia y poder en la Fuerza lo convierten en uno de los villanos más temidos de la saga, 
-                    con un impacto duradero en la galaxia.  
-                </p>
-            </div>
-        </section>
-
-        <section class="Personaje">
-            <img src="../characters/Rey.png" alt="" class="imagen_personajes">
-            <div class="Personajes_descripcion">
-                <h3>Rey</h3>
-                <p>
-                    Una chatarrera de Jakku con un misterioso pasado, Rey descubre su conexión con la Fuerza y se convierte en una Jedi. 
-                    Su viaje es uno de autodescubrimiento y lucha contra la Primera Orden. Rey busca entender su linaje mientras enfrenta a Kylo Ren, 
-                    y su historia culmina en la restauración del equilibrio en la galaxia.
-                </p>
-            </div>
-        </section>
-
-
-        <section class="Personaje">
-            <img src="../characters/Ben Solo.png" alt="" class="imagen_personajes">
-            <div class="Personajes_descripcion">
-                <h3>Kylo Ren / Ben Solo</h3>
-                <p>
-                    Hijo de Han Solo y Leia Organa, Kylo Ren lucha con su herencia y su conexión con la Fuerza. 
-                    Seducido por el Lado Oscuro, busca emular a Darth Vader. Su conflicto interno y relación con Rey son centrales en la trilogía secuela. 
-                    A lo largo de su viaje, busca redención y finalmente se convierte en Ben Solo, enfrentándose a su destino.
-                </p>
-            </div>
-        </section>
-
-        <section class="Personaje">
-            <img src="../characters/Chewbacca.png" alt="" class="imagen_personajes">
-            <div class="Personajes_descripcion">
-                <h3>Chewbacca</h3>
-                <p>
-                    Un leal wookiee y copiloto del Halcón Milenario, Chewbacca es conocido por su fuerza y valentía. 
-                    Amigo cercano de Han Solo, ha estado en muchas aventuras a lo largo de la saga. Su lealtad y habilidades de combate lo convierten 
-                    en un aliado invaluable para la Rebelión y la Resistencia, siendo un símbolo de amistad y coraje.
-                </p>
-            </div>
-        </section>
-
-        <section class="Personaje">
-            <img src="../characters/R2-D2.png" alt="" class="imagen_personajes">
-            <div class="Personajes_descripcion">
-                <h3>R2-D2</h3>
-                <p>
-                    Un astromecánico valiente y leal, R2-D2 ha estado presente en muchos eventos clave de la saga. 
-                    Su ingenio y habilidades técnicas han salvado a los héroes en numerosas ocasiones. 
-                    A pesar de ser un droide, R2-D2 muestra una personalidad única y es un símbolo de esperanza y perseverancia en la lucha contra el mal.
-                </p>
-            </div>
-        </section>
-
-        <section class="Personaje">
-            <img src="../characters/C-3PO.png" alt="" class="imagen_personajes">
-            <div class="Personajes_descripcion">
-                <h3>C-3PO</h3>
-                <p>
-                    Un droide de protocolo fluido en múltiples idiomas, C-3PO es conocido por su personalidad ansiosa y su lealtad. 
-                    Acompaña a R2-D2 en muchas aventuras y proporciona un alivio cómico en momentos tensos. 
-                    Aunque no es un guerrero, su conocimiento y habilidades de comunicación son esenciales para los héroes de la saga.
-                </p>
-            </div>
-        </section>
-
-        <section class="Personaje">
-            <img src="../characters/Darth Maul.png" alt="" class="imagen_personajes">
-            <div class="Personajes_descripcion">
-                <h3>Darth Maul</h3>
-                <p>
-                    Un temido Sith con un aspecto icónico, Darth Maul es conocido por su doble sable de luz y su ferocidad en combate. 
-                    Aunque fue derrotado por Obi-Wan Kenobi, su legado perdura en la saga. Su búsqueda de venganza y poder lo convierte en un villano memorable, 
-                    y su regreso en series animadas amplía su historia y complejidad.
-                </p>
-            </div>
-        </section>
-
-        <section class="Personaje">
-            <img src="../characters/The Mandalorian (Din Djarin).png" alt="" class="imagen_personajes">
-            <div class="Personajes_descripcion">
-                <h3>The Mandalorian (Din Djarin)</h3>
-                <p>
-                    Un cazarrecompensas solitario en el universo de Star Wars, Din Djarin sigue el código mandaloriano mientras navega por la galaxia. 
-                    Su relación con Grogu (Baby Yoda) es central en su historia, mostrando su evolución de un guerrero frío a un protector cariñoso. 
-                    A través de sus aventuras, Din Djarin explora temas de honor, familia y redención.
-            </div>
-        </section>
-        </section>
-    </body>
 </html>
