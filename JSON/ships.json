@@ -1,77 +1,182 @@
 [
-    {
-      "nombre": "Millennium Falcon",
-      "descripcion": "Nave de carga modificada, famosa por su velocidad y pilotada por Han Solo y Chewbacca. Crucial en las batallas de la Rebelión.",
-      "imagen": "../ships/Millennium Falcon.png"
-    },
-    {
-      "nombre": "X-Wing",
-      "descripcion": "Caza estelar de la Alianza Rebelde, conocido por su maniobrabilidad y potencia de fuego. Utilizado en ataques contra la flota imperial.",
-      "imagen": "../ships/X-Wing.png"
-    },
-    {
-      "nombre": "TIE Fighter",
-      "descripcion": "Caza estelar de la flota imperial, caracterizado por su distintivo diseño en forma de alas. Utilizado por los pilotos imperiales en misiones de combate.",
-      "imagen": "../ships/TIE Fighter.png"
-    },
-    {
-      "nombre": "Slave I (Firespray-31)",
-      "descripcion": "Nave de caza y transporte utilizada por el cazarrecompensas Boba Fett. Conocida por su diseño distintivo y capacidad para realizar misiones de captura.",
-      "imagen": "../ships/Slave I (Firespray-31).png"
-    },
-    {
-      "nombre": "Star Destroyer",
-      "descripcion": "Nave capital de la flota imperial, imponente y poderosa. Utilizada para mantener el control del espacio y aplastar a la Rebelión.",
-      "imagen": "../ships/Star Destroyer.png"
-    },
-    {
-      "nombre": "Death Star (Estrella de la Muerte)",
-      "descripcion": "Estación espacial y arma de destrucción masiva de la flota imperial. Capaz de destruir planetas enteros con su superláser.",
-      "imagen": "../ships/Death Star (Estrella de la Muerte).png"
-    },
-    {
-      "nombre": "Y-Wing",
-      "descripcion": "Caza bombardero de la Alianza Rebelde, utilizado para misiones de ataque a objetivos terrestres e instalaciones imperiales. Conocido por su resistencia y potencia de fuego.",
-      "imagen": "../ships/Y-Wing.png"
-    },
-    {
-      "nombre": "A-Wing",
-      "descripcion": "Caza estelar ligero de la Alianza Rebelde, diseñado para velocidad y maniobrabilidad. Utilizado en misiones de reconocimiento y ataque rápido.",
-      "imagen": "../ships/A-Wing.png"
-    },
-    {
-      "nombre": "B-Wing",
-      "descripcion": "Caza bombardero de la Alianza Rebelde, especializado en ataques a naves capitales. Conocido por su diseño único y capacidad para realizar maniobras complejas.",
-      "imagen": "../ships/B-Wing.png"
-    },
-    {
-      "nombre": "TIE Interceptor",
-      "descripcion": "Versión mejorada del TIE Fighter, con mayor velocidad y maniobrabilidad. Utilizado por pilotos imperiales de élite en misiones de combate.",
-      "imagen": "../ships/TIE Interceptor.png"
-    },
-    {
-      "nombre": "Imperial Shuttle (Lambda-class)",
-      "descripcion": "Nave de carga modificada, famosa por su velocidad y pilotada por Han Solo y Chewbacca. Crucial en las batallas de la Rebelión.",
-      "imagen": "../ships/Imperial Shuttle (Lambda-class).png"
-    },
-    {
-      "nombre": "U-Wing",
-      "descripcion": "Nave de transporte y apoyo aéreo de la Alianza Rebelde, utilizada para misiones de infiltración y extracción. Conocida por su capacidad para transportar tropas y suministros.",
-      "imagen": "../ships/U-Wing.png"
-    },
-    {
-      "nombre": "Jedi Starfighter (Delta-7)",
-      "descripcion": "Caza estelar utilizado por los Jedi durante las Guerras Clon. Conocido por su agilidad y capacidad para realizar maniobras evasivas. Pilotado por Jedi como Anakin Skywalker y Obi-Wan Kenobi.",
-      "imagen": "../ships/Jedi Starfighter (Delta-7).png"
-    },
-    {
-      "nombre": "Naboo N-1 Starfighter",
-      "descripcion": "Caza estelar utilizado por la Reina Amidala y la Guardia Real de Naboo. Conocido por su diseño elegante y velocidad. Utilizado en la defensa de Naboo contra la invasión de la Federación de Comercio.",
-      "imagen": "../ships/Naboo N-1 Starfighter.png"
-    },
-    {
-      "nombre": "Razor Crest",
-      "descripcion": "Nave de transporte y caza utilizada por el cazarrecompensas Din Djarin (The Mandalorian). Conocida por su resistencia y capacidad para realizar misiones de captura y transporte de prisioneros.",
-      "imagen": "../ships/Razor Crest.png"
+  {
+    "nombre": "Millennium Falcon",
+    "descripcion": "Nave de carga modificada, famosa por su velocidad y pilotada por Han Solo y Chewbacca. Crucial en las batallas de la Rebelión.",
+    "imagen": "../ships/Millennium Falcon.png",
+    "peliculas": ["Una Nueva Esperanza", "El Imperio Contraataca", "El Retorno del Jedi", "El Despertar de la Fuerza"],
+    "stats": {
+      "velocidad_hiperespacio": "90%",
+      "maniobrabilidad": "85%",
+      "blindaje": "70%",
+      "capacidad_carga": "80%"
     }
-  ]
+  },
+  {
+    "nombre": "X-Wing",
+    "descripcion": "Caza estelar de la Alianza Rebelde, conocido por su maniobrabilidad y potencia de fuego. Utilizado en ataques contra la flota imperial.",
+    "imagen": "../ships/X-Wing.png",
+    "peliculas": ["Una Nueva Esperanza", "El Imperio Contraataca", "El Retorno del Jedi", "El Despertar de la Fuerza"],
+    "stats": {
+      "potencia_fuego": "85%",
+      "maniobrabilidad": "80%",
+      "velocidad": "75%",
+      "resistencia": "70%"
+    }
+  },
+  {
+    "nombre": "TIE Fighter",
+    "descripcion": "Caza estelar de la flota imperial, caracterizado por su distintivo diseño en forma de alas. Utilizado por los pilotos imperiales en misiones de combate.",
+    "imagen": "../ships/TIE Fighter.png",
+    "peliculas": ["Una Nueva Esperanza", "El Imperio Contraataca", "El Retorno del Jedi", "Rogue One"],
+    "stats": {
+      "velocidad": "80%",
+      "potencia_fuego": "65%",
+      "blindaje": "40%",
+      "produccion_masiva": "95%"
+    }
+  },
+  {
+    "nombre": "Slave I (Firespray-31)",
+    "descripcion": "Nave de caza y transporte utilizada por el cazarrecompensas Boba Fett. Conocida por su diseño distintivo y capacidad para realizar misiones de captura.",
+    "imagen": "../ships/Slave I (Firespray-31).png",
+    "peliculas": ["El Imperio Contraataca", "El Ataque de los Clones", "El Libro de Boba Fett", "The Mandalorian"],
+    "stats": {
+      "potencia_armas": "90%",
+      "blindaje": "80%",
+      "maniobrabilidad": "70%",
+      "capacidad_detencion": "85%"
+    }
+  },
+  {
+    "nombre": "Star Destroyer",
+    "descripcion": "Nave capital de la flota imperial, imponente y poderosa. Utilizada para mantener el control del espacio y aplastar a la Rebelión.",
+    "imagen": "../ships/Star Destroyer.png",
+    "peliculas": ["Una Nueva Esperanza", "El Imperio Contraataca", "El Retorno del Jedi", "Rogue One"],
+    "stats": {
+      "tamaño": "100%",
+      "potencia_fuego": "95%",
+      "capacidad_tripulacion": "98%",
+      "blindaje": "90%"
+    }
+  },
+  {
+    "nombre": "Death Star (Estrella de la Muerte)",
+    "descripcion": "Estación espacial y arma de destrucción masiva de la flota imperial. Capaz de destruir planetas enteros con su superláser.",
+    "imagen": "../ships/Death Star (Estrella de la Muerte).png",
+    "peliculas": ["Una Nueva Esperanza", "El Retorno del Jedi", "Rogue One", "Andor"],
+    "stats": {
+      "poder_destruccion": "100%",
+      "defensas": "90%",
+      "tamaño": "100%",
+      "tripulacion": "100%"
+    }
+  },
+  {
+    "nombre": "Y-Wing",
+    "descripcion": "Caza bombardero de la Alianza Rebelde, utilizado para misiones de ataque a objetivos terrestres e instalaciones imperiales.",
+    "imagen": "../ships/Y-Wing.png",
+    "peliculas": ["Una Nueva Esperanza", "El Retorno del Jedi", "Rogue One", "The Clone Wars"],
+    "stats": {
+      "resistencia": "85%",
+      "potencia_bombas": "90%",
+      "velocidad": "60%",
+      "blindaje": "75%"
+    }
+  },
+  {
+    "nombre": "A-Wing",
+    "descripcion": "Caza estelar ligero de la Alianza Rebelde, diseñado para velocidad y maniobrabilidad.",
+    "imagen": "../ships/A-Wing.png",
+    "peliculas": ["El Retorno del Jedi", "El Despertar de la Fuerza", "The Last Jedi", "Resistance"],
+    "stats": {
+      "velocidad": "95%",
+      "maniobrabilidad": "90%",
+      "blindaje": "50%",
+      "potencia_fuego": "60%"
+    }
+  },
+  {
+    "nombre": "B-Wing",
+    "descripcion": "Caza bombardero especializado en ataques a naves capitales.",
+    "imagen": "../ships/B-Wing.png",
+    "peliculas": ["El Retorno del Jedi", "Rebels", "The Rise of Skywalker", "Battlefront II"],
+    "stats": {
+      "potencia_fuego": "95%",
+      "diseño_unico": "90%",
+      "maniobrabilidad": "60%",
+      "blindaje": "80%"
+    }
+  },
+  {
+    "nombre": "TIE Interceptor",
+    "descripcion": "Versión mejorada del TIE Fighter, con mayor velocidad y maniobrabilidad.",
+    "imagen": "../ships/TIE Interceptor.png",
+    "peliculas": ["El Retorno del Jedi", "The Mandalorian", "Resistance", "The Rise of Skywalker"],
+    "stats": {
+      "velocidad": "90%",
+      "maniobrabilidad": "85%",
+      "blindaje": "45%",
+      "potencia_fuego": "70%"
+    }
+  },
+  {
+    "nombre": "Imperial Shuttle (Lambda-class)",
+    "descripcion": "Nave de transporte utilizada por oficiales imperiales de alto rango.",
+    "imagen": "../ships/Imperial Shuttle (Lambda-class).png",
+    "peliculas": ["El Retorno del Jedi", "El Imperio Contraataca", "Rogue One", "Rebels"],
+    "stats": {
+      "capacidad_transporte": "90%",
+      "defensas": "70%",
+      "camuflaje": "60%",
+      "blindaje": "75%"
+    }
+  },
+  {
+    "nombre": "U-Wing",
+    "descripcion": "Nave de transporte y apoyo aéreo de la Alianza Rebelde.",
+    "imagen": "../ships/U-Wing.png",
+    "peliculas": ["Rogue One", "Rebels", "Andor", "The Mandalorian"],
+    "stats": {
+      "capacidad_soldados": "85%",
+      "potencia_armas": "70%",
+      "resistencia": "75%",
+      "maniobrabilidad": "65%"
+    }
+  },
+  {
+    "nombre": "Jedi Starfighter (Delta-7)",
+    "descripcion": "Caza estelar utilizado por los Jedi durante las Guerras Clon.",
+    "imagen": "../ships/Jedi Starfighter (Delta-7).png",
+    "peliculas": ["El Ataque de los Clones", "La Guerra de los Clones", "The Clone Wars", "Rebels"],
+    "stats": {
+      "velocidad": "80%",
+      "maniobrabilidad": "85%",
+      "respuesta_fuerza": "95%",
+      "blindaje": "50%"
+    }
+  },
+  {
+    "nombre": "Naboo N-1 Starfighter",
+    "descripcion": "Caza estelar de la Guardia Real de Naboo.",
+    "imagen": "../ships/Naboo N-1 Starfighter.png",
+    "peliculas": ["La Amenaza Fantasma", "The Mandalorian", "The Clone Wars", "The Book of Boba Fett"],
+    "stats": {
+      "diseño_elegante": "90%",
+      "velocidad": "75%",
+      "maniobrabilidad": "80%",
+      "potencia_fuego": "65%"
+    }
+  },
+  {
+    "nombre": "Razor Crest",
+    "descripcion": "Nave utilizada por el cazarrecompensas Din Djarin.",
+    "imagen": "../ships/Razor Crest.png",
+    "peliculas": ["The Mandalorian", "The Book of Boba Fett", "The Clone Wars", "Tales of the Jedi"],
+    "stats": {
+      "resistencia": "90%",
+      "potencia_armas": "85%",
+      "capacidad_captura": "80%",
+      "maniobrabilidad": "70%"
+    }
+  }
+]
