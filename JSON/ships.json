@@ -1,5 +1,6 @@
 [
   {
+    "id": "10",
     "nombre": "Millennium Falcon",
     "descripcion": "Nave de carga modificada, famosa por su velocidad y pilotada por Han Solo y Chewbacca. Crucial en las batallas de la Rebelión.",
     "imagen": "../ships/Millennium Falcon.png",
@@ -12,6 +13,7 @@
     }
   },
   {
+    "id": "11",
     "nombre": "X-Wing",
     "descripcion": "Caza estelar de la Alianza Rebelde, conocido por su maniobrabilidad y potencia de fuego. Utilizado en ataques contra la flota imperial.",
     "imagen": "../ships/X-Wing.png",
@@ -24,6 +26,7 @@
     }
   },
   {
+    "id": "",
     "nombre": "TIE Fighter",
     "descripcion": "Caza estelar de la flota imperial, caracterizado por su distintivo diseño en forma de alas. Utilizado por los pilotos imperiales en misiones de combate.",
     "imagen": "../ships/TIE Fighter.png",
@@ -36,6 +39,7 @@
     }
   },
   {
+    "id": "28",
     "nombre": "Slave I (Firespray-31)",
     "descripcion": "Nave de caza y transporte utilizada por el cazarrecompensas Boba Fett. Conocida por su diseño distintivo y capacidad para realizar misiones de captura.",
     "imagen": "../ships/Slave I (Firespray-31).png",
@@ -48,6 +52,7 @@
     }
   },
   {
+    "id": "3",
     "nombre": "Star Destroyer",
     "descripcion": "Nave capital de la flota imperial, imponente y poderosa. Utilizada para mantener el control del espacio y aplastar a la Rebelión.",
     "imagen": "../ships/Star Destroyer.png",
@@ -60,6 +65,7 @@
     }
   },
   {
+    "id": "9",
     "nombre": "Death Star (Estrella de la Muerte)",
     "descripcion": "Estación espacial y arma de destrucción masiva de la flota imperial. Capaz de destruir planetas enteros con su superláser.",
     "imagen": "../ships/Death Star (Estrella de la Muerte).png",
@@ -72,6 +78,7 @@
     }
   },
   {
+    "id": "12",
     "nombre": "Y-Wing",
     "descripcion": "Caza bombardero de la Alianza Rebelde, utilizado para misiones de ataque a objetivos terrestres e instalaciones imperiales.",
     "imagen": "../ships/Y-Wing.png",
@@ -84,6 +91,7 @@
     }
   },
   {
+    "id": "15",
     "nombre": "A-Wing",
     "descripcion": "Caza estelar ligero de la Alianza Rebelde, diseñado para velocidad y maniobrabilidad.",
     "imagen": "../ships/A-Wing.png",
@@ -96,6 +104,7 @@
     }
   },
   {
+    "id": "16",
     "nombre": "B-Wing",
     "descripcion": "Caza bombardero especializado en ataques a naves capitales.",
     "imagen": "../ships/B-Wing.png",
@@ -120,6 +129,7 @@
     }
   },
   {
+    "id": "29",
     "nombre": "Imperial Shuttle (Lambda-class)",
     "descripcion": "Nave de transporte utilizada por oficiales imperiales de alto rango.",
     "imagen": "../ships/Imperial Shuttle (Lambda-class).png",
@@ -144,6 +154,7 @@
     }
   },
   {
+    "id": "24",
     "nombre": "Jedi Starfighter (Delta-7)",
     "descripcion": "Caza estelar utilizado por los Jedi durante las Guerras Clon.",
     "imagen": "../ships/Jedi Starfighter (Delta-7).png",
@@ -156,6 +167,7 @@
     }
   },
   {
+    "id": "19",
     "nombre": "Naboo N-1 Starfighter",
     "descripcion": "Caza estelar de la Guardia Real de Naboo.",
     "imagen": "../ships/Naboo N-1 Starfighter.png",
