@@ -10,7 +10,8 @@
       "nivel_amenaza": "90%",
       "dominio_sable_laser": "95%",
       "estrategia_tactica": "80%"
-    }
+    },
+    "peliculas": ["La Amenaza Fantasma", "El Ataque de los Clones", "La Venganza de los Sith", "Una Nueva Esperanza", "El Imperio Contraataca", "El Retorno del Jedi"]
   },
   {
     "id": 1,
@@ -23,7 +24,8 @@
       "nivel_amenaza": "70%",
       "dominio_sable_laser": "85%",
       "estrategia_tactica": "75%"
-    }
+    },
+    "peliculas": ["Una Nueva Esperanza", "El Imperio Contraataca", "El Retorno del Jedi", "El Despertar de la Fuerza", "Los Últimos Jedi", "El Ascenso de Skywalker"]
   },
   {
     "id": 5,
@@ -36,7 +38,8 @@
       "nivel_amenaza": "60%",
       "dominio_sable_laser": "50%",
       "estrategia_tactica": "85%"
-    }
+    },
+    "peliculas": ["Una Nueva Esperanza", "El Imperio Contraataca", "El Retorno del Jedi", "El Despertar de la Fuerza", "Los Últimos Jedi", "El Ascenso de Skywalker"]
   },
   {
     "id": 14,
@@ -49,7 +52,8 @@
       "nivel_amenaza": "70%",
       "dominio_sable_laser": "20%",
       "estrategia_tactica": "80%"
-    }
+    },
+    "peliculas": ["Una Nueva Esperanza", "El Imperio Contraataca", "El Retorno del Jedi", "El Despertar de la Fuerza"]
   },
   {
     "id": 10,
@@ -62,7 +66,8 @@
       "nivel_amenaza": "70%",
       "dominio_sable_laser": "90%",
       "estrategia_tactica": "80%"
-    }
+    },
+    "peliculas": ["La Amenaza Fantasma", "El Ataque de los Clones", "La Venganza de los Sith", "Una Nueva Esperanza"]
   },
   {
     "id": 20,
@@ -75,7 +80,8 @@
       "nivel_amenaza": "60%",
       "dominio_sable_laser": "80%",
       "estrategia_tactica": "90%"
-    }
+    },
+    "peliculas": ["La Amenaza Fantasma", "El Ataque de los Clones", "La Venganza de los Sith", "El Imperio Contraataca", "El Retorno del Jedi"]
   },
   {
     "id": 35,
@@ -88,7 +94,8 @@
       "nivel_amenaza": "40%",
       "dominio_sable_laser": "30%",
       "estrategia_tactica": "75%"
-    }
+    },
+    "peliculas": ["La Amenaza Fantasma", "El Ataque de los Clones", "La Venganza de los Sith"]
   },
   {
     "id": 21,
@@ -101,7 +108,8 @@
       "nivel_amenaza": "90%",
       "dominio_sable_laser": "85%",
       "estrategia_tactica": "95%"
-    }
+    },
+    "peliculas": ["La Amenaza Fantasma", "El Ataque de los Clones", "La Venganza de los Sith", "Una Nueva Esperanza", "El Imperio Contraataca", "El Retorno del Jedi", "El Ascenso de Skywalker"]
   },
   {
     "id": 1001,
@@ -121,7 +129,8 @@
       "nivel_amenaza": "75%",
       "dominio_sable_laser": "80%",
       "estrategia_tactica": "70%"
-    }
+    },
+    "peliculas": ["El Despertar de la Fuerza", "Los Últimos Jedi", "El Ascenso de Skywalker"]
   },
   {
     "id": 1002,
@@ -141,7 +150,8 @@
       "nivel_amenaza": "80%",
       "dominio_sable_laser": "90%",
       "estrategia_tactica": "65%"
-    }
+    },
+    "peliculas": ["El Despertar de la Fuerza", "Los Últimos Jedi", "El Ascenso de Skywalker"]
   },
   {
     "id": 13,
@@ -154,7 +164,8 @@
       "nivel_amenaza": "60%",
       "dominio_sable_laser": "30%",
       "estrategia_tactica": "70%"
-    }
+    },
+    "peliculas": ["Una Nueva Esperanza", "El Imperio Contraataca", "El Retorno del Jedi", "El Despertar de la Fuerza", "Los Últimos Jedi", "El Ascenso de Skywalker"]
   },
   {
     "id": 3,
@@ -167,7 +178,8 @@
       "nivel_amenaza": "40%",
       "dominio_sable_laser": "20%",
       "estrategia_tactica": "80%"
-    }
+    },
+    "peliculas": ["La Amenaza Fantasma", "El Ataque de los Clones", "La Venganza de los Sith", "Una Nueva Esperanza", "El Imperio Contraataca", "El Retorno del Jedi"]
   },
   {
     "id": 2,
@@ -180,8 +192,9 @@
       "nivel_amenaza": "30%",
       "dominio_sable_laser": "10%",
       "estrategia_tactica": "70%"
-    }
-  },
+    },
+    "peliculas": ["La Amenaza Fantasma", "El Ataque de los Clones", "La Venganza de los Sith", "Una Nueva Esperanza", "El Imperio Contraataca", "El Retorno del Jedi", "El Despertar de la Fuerza", "Los Últimos Jedi", "El Ascenso de Skywalker"]
+},
   {
     "id": 44,
     "nombre": "Darth Maul",
@@ -193,7 +206,8 @@
       "nivel_amenaza": "85%",
       "dominio_sable_laser": "90%",
       "estrategia_tactica": "75%"
-    }
+    },
+    "peliculas": ["La Amenaza Fantasma", "The Clone Wars", "Rebels"]
   },
   {
     "id": 1003,
@@ -213,6 +227,7 @@
       "nivel_amenaza": "75%",
       "dominio_sable_laser": "65%",
       "estrategia_tactica": "80%"
-    }
+    },
+    "peliculas": ["The Mandalorian"]
   }
 ]
