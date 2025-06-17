@@ -3,90 +3,216 @@
     "id": 4,
     "nombre": "Dart Vader",
     "descripcion": "Anakin fue un niño esclavo en Tatooine con un talento excepcional en la Fuerza. Entrenado como Jedi, luchó en las Guerras Clon y fue considerado el Elegido que traería equilibrio. Sin embargo, sus miedos y el deseo de evitar la muerte de Padmé lo llevaron al Lado Oscuro. Convertido en Darth Vader, sirvió al Imperio hasta su redención final por su hijo, Luke.",
-    "imagen": "../characters/Dart Vader.png"
+    "descripcion_extendida": "Darth Vader, anteriormente conocido como Anakin Skywalker, es uno de los personajes más icónicos de Star Wars. Su historia comienza como un niño esclavo en Tatooine, donde su talento innato en la Fuerza lo llevó a ser entrenado como Jedi. Sin embargo, su miedo a perder a sus seres queridos y su ambición lo llevaron al Lado Oscuro, convirtiéndose en el aprendiz del Emperador Palpatine. Como Darth Vader, lideró la purga de los Jedi y ayudó a consolidar el poder del Imperio Galáctico. Su redención final llegó gracias a su hijo, Luke Skywalker, sacrificándose para destruir al Emperador y restaurar el equilibrio en la Fuerza.",
+    "imagen": "../characters/Dart Vader.png",
+    "stats": {
+      "poder_fuerza": "85%",
+      "nivel_amenaza": "90%",
+      "dominio_sable_laser": "95%",
+      "estrategia_tactica": "80%"
+    }
   },
   {
     "id": 1,
     "nombre": "Luke Skywalker",
     "descripcion": "Luke comenzó como un joven soñador en Tatooine y descubrió su verdadero destino como hijo de Anakin Skywalker. Fue entrenado por Obi-Wan y Yoda, convirtiéndose en un poderoso Jedi. Se enfrentó a Darth Vader y logró redimirlo, restaurando la esperanza en la galaxia. Su legado continuó como maestro en una nueva generación de Jedi.",
-    "imagen": "../characters/Luke Skywalker.png"
+    "descripcion_extendida": "Luke Skywalker es el héroe central de la trilogía original de Star Wars. Criado como un humilde granjero en Tatooine, su vida cambió cuando descubrió que era el hijo de Anakin Skywalker, un poderoso Jedi que se convirtió en Darth Vader. Entrenado por Obi-Wan Kenobi y Yoda, Luke se convirtió en un símbolo de esperanza para la Rebelión contra el Imperio. Su enfrentamiento con Darth Vader y el Emperador Palpatine marcó el punto culminante de su viaje, logrando redimir a su padre y restaurar el equilibrio en la Fuerza. En sus años posteriores, Luke intentó reconstruir la Orden Jedi, enfrentando desafíos que lo llevaron a cuestionar su papel en la galaxia.",
+    "imagen": "../characters/Luke Skywalker.png",
+    "stats": {
+      "poder_fuerza": "80%",
+      "nivel_amenaza": "70%",
+      "dominio_sable_laser": "85%",
+      "estrategia_tactica": "75%"
+    }
   },
   {
     "id": 5,
     "nombre": "Leia Organa",
     "descripcion": "Hija de Padmé y Anakin, fue adoptada por la familia real de Alderaan y se convirtió en princesa y líder rebelde. Inteligente, firme y valiente, lideró misiones cruciales contra el Imperio. En la trilogía secuela, se convierte en General de la Resistencia y muestra su conexión con la Fuerza. Es una figura central tanto política como emocionalmente en la saga.",
-    "imagen": "../characters/Leia Organa.png"
+    "descripcion_extendida": "Leia Organa es una figura clave en la lucha contra el Imperio Galáctico y la Primera Orden. Adoptada por la familia real de Alderaan, Leia creció como princesa y líder política. Su valentía y determinación la llevaron a convertirse en una líder de la Alianza Rebelde, desempeñando un papel crucial en la destrucción de la Estrella de la Muerte y en la derrota del Imperio. En la trilogía secuela, Leia se convierte en General de la Resistencia, liderando la lucha contra la Primera Orden mientras enfrenta pérdidas personales y desafíos políticos. Su conexión con la Fuerza y su legado como hija de Anakin Skywalker la convierten en una figura icónica de la saga.",
+    "imagen": "../characters/Leia Organa.png",
+    "stats": {
+      "poder_fuerza": "70%",
+      "nivel_amenaza": "60%",
+      "dominio_sable_laser": "50%",
+      "estrategia_tactica": "85%"
+    }
   },
   {
     "id": 14,
     "nombre": "Han Solo",
     "descripcion": "Un contrabandista carismático y piloto del Halcón Milenario, Han Solo se unió a la Rebelión contra el Imperio. Su relación con Leia Organa es fundamental en la saga. Aunque inicialmente egoísta, demuestra valentía y lealtad, convirtiéndose en un héroe clave en la lucha contra el Imperio y más tarde contra la Primera Orden.",
-    "imagen": "../characters/Han Solo.png"
+    "descripcion_extendida": "Han Solo es un contrabandista y piloto del Halcón Milenario que se convierte en un héroe de la Rebelión. Su relación con Leia Organa y su amistad con Chewbacca son fundamentales en su desarrollo como personaje. Aunque inicialmente motivado por el dinero y la supervivencia, Han demuestra ser valiente y leal, desempeñando un papel crucial en la destrucción de la Estrella de la Muerte y en la derrota del Imperio. En la trilogía secuela, Han enfrenta desafíos personales y familiares, incluyendo la lucha por redimir a su hijo, Kylo Ren.",
+    "imagen": "../characters/Han Solo.png",
+    "stats": {
+      "poder_fuerza": "30%",
+      "nivel_amenaza": "70%",
+      "dominio_sable_laser": "20%",
+      "estrategia_tactica": "80%"
+    }
   },
   {
     "id": 10,
     "nombre": "Obi-Wan Kenobi",
     "descripcion": "Un maestro Jedi sabio y experimentado, Obi-Wan fue mentor de Anakin Skywalker y más tarde de su hijo, Luke. Su papel es crucial en las Guerras Clon y en la lucha contra el Imperio. Su sacrificio y enseñanzas perduran a lo largo de la saga, siendo un símbolo de esperanza y resistencia para los Jedi y la Rebelión.",
-    "imagen": "../characters/Obi-Wan Kenobi.png"
+    "descripcion_extendida": "Obi-Wan Kenobi es uno de los Jedi más respetados y sabios de la saga. Como mentor de Anakin Skywalker, Obi-Wan desempeñó un papel crucial en las Guerras Clon y en la caída de la Orden Jedi. Su enfrentamiento con Anakin, que se convirtió en Darth Vader, marcó un punto crucial en su vida. Más tarde, Obi-Wan entrenó a Luke Skywalker, guiándolo en su camino para convertirse en un Jedi. Su sacrificio en la Estrella de la Muerte y sus enseñanzas espirituales lo convierten en un símbolo de esperanza y resistencia para la Rebelión.",
+    "imagen": "../characters/Obi-Wan Kenobi.png",
+    "stats": {
+      "poder_fuerza": "85%",
+      "nivel_amenaza": "70%",
+      "dominio_sable_laser": "90%",
+      "estrategia_tactica": "80%"
+    }
   },
   {
     "id": 20,
     "nombre": "Yoda",
     "descripcion": "Un maestro Jedi legendario, Yoda es conocido por su sabiduría y habilidades en la Fuerza. Entrenó a generaciones de Jedi, incluido Luke Skywalker. Su pequeño tamaño contrasta con su gran poder y conocimiento. Yoda es un símbolo de la lucha por la justicia y la paz en la galaxia, y su legado perdura a través de sus enseñanzas.",
-    "imagen": "../characters/Yoda.png"
+    "descripcion_extendida": "Yoda es uno de los Jedi más poderosos y sabios de la historia de Star Wars. Como líder del Consejo Jedi, Yoda entrenó a generaciones de Jedi y desempeñó un papel crucial en las Guerras Clon. Su exilio en Dagobah tras la caída de la Orden Jedi lo llevó a entrenar a Luke Skywalker, transmitiéndole su conocimiento y sabiduría. A pesar de su pequeño tamaño, Yoda es un maestro en el uso de la Fuerza y en el combate con el sable de luz. Su legado perdura como un símbolo de justicia, paz y resistencia.",
+    "imagen": "../characters/Yoda.png",
+    "stats": {
+      "poder_fuerza": "95%",
+      "nivel_amenaza": "60%",
+      "dominio_sable_laser": "80%",
+      "estrategia_tactica": "90%"
+    }
   },
   {
     "id": 35,
     "nombre": "Padmé Amidala",
     "descripcion": "Reina de Naboo y luego senadora, Padmé Amidala es una líder valiente y decidida. Su amor por Anakin Skywalker y su compromiso con la paz la convierten en una figura clave en las Guerras Clon. Su trágica muerte marca un punto crucial en la saga, influyendo en el destino de sus hijos y el futuro de la galaxia.",
-    "imagen": "../characters/Padmé Amidala.png"
+    "descripcion_extendida": "Padmé Amidala es una figura central en la saga de Star Wars. Como reina de Naboo, lideró su pueblo con valentía durante la crisis de la Federación de Comercio. Más tarde, como senadora, luchó por la paz y la democracia en la República Galáctica. Su relación con Anakin Skywalker y su trágico destino marcaron un punto crucial en la historia, influyendo en el surgimiento del Imperio y en el destino de sus hijos, Luke y Leia.",
+    "imagen": "../characters/Padmé Amidala.png",
+    "stats": {
+      "poder_fuerza": "50%",
+      "nivel_amenaza": "40%",
+      "dominio_sable_laser": "30%",
+      "estrategia_tactica": "75%"
+    }
   },
   {
     "id": 21,
     "nombre": "Emperador Palpatine / Darth Sidious",
     "descripcion": "Un maestro manipulador y oscuro, Palpatine es el arquitecto del ascenso del Imperio. Como Darth Sidious, seduce a Anakin al Lado Oscuro y busca destruir a los Jedi. Su astucia y poder en la Fuerza lo convierten en uno de los villanos más temidos de la saga, con un impacto duradero en la galaxia.",
-    "imagen": "../characters/Darth Sidious.png"
+    "descripcion_extendida": "El Emperador Palpatine, también conocido como Darth Sidious, es el principal antagonista de la saga de Star Wars. Su habilidad para manipular y su profundo conocimiento del Lado Oscuro de la Fuerza lo llevaron a destruir la República y establecer el Imperio Galáctico. Sedujo a Anakin Skywalker al Lado Oscuro, convirtiéndolo en Darth Vader. Su influencia y poder perduraron incluso después de su aparente muerte, regresando en la trilogía secuela para intentar recuperar el control de la galaxia.",
+    "imagen": "../characters/Darth Sidious.png",
+    "stats": {
+      "poder_fuerza": "95%",
+      "nivel_amenaza": "90%",
+      "dominio_sable_laser": "85%",
+      "estrategia_tactica": "95%"
+    }
   },
   {
     "id": 1001,
     "nombre": "Rey",
     "descripcion": "Una chatarrera de Jakku con un misterioso pasado, Rey descubre su conexión con la Fuerza y se convierte en una Jedi. Su viaje es uno de autodescubrimiento y lucha contra la Primera Orden. Rey busca entender su linaje mientras enfrenta a Kylo Ren, y su historia culmina en la restauración del equilibrio en la galaxia.",
-    "imagen": "../characters/Rey.png"
+    "descripcion_extendida": "Rey es una joven chatarrera de Jakku que se convierte en una de las figuras más importantes de la lucha contra la Primera Orden. Su misterioso pasado y su conexión con la Fuerza la llevan a descubrir que es descendiente del Emperador Palpatine. A lo largo de su viaje, Rey enfrenta desafíos emocionales y físicos mientras aprende los caminos de los Jedi. Su relación con Kylo Ren, marcada por el conflicto y la redención, es central en la trilogía secuela. Rey finalmente abraza su destino como una Jedi, adoptando el apellido Skywalker y restaurando el equilibrio en la galaxia. Su valentía, determinación y conexión con la Fuerza la convierten en un símbolo de esperanza para una nueva generación.",
+    "imagen": "../characters/Rey.png",
+    "altura": "170 cm",
+    "peso": "55 kg",
+    "color_cabello": "brown",
+    "color_piel": "fair",
+    "color_ojos": "brown",
+    "anio_nacimiento": "15ABY",
+    "genero": "female",
+    "stats": {
+      "poder_fuerza": "90%",
+      "nivel_amenaza": "75%",
+      "dominio_sable_laser": "80%",
+      "estrategia_tactica": "70%"
+    }
   },
   {
     "id": 1002,
     "nombre": "Kylo Ren / Ben Solo",
     "descripcion": "Hijo de Han Solo y Leia Organa, Kylo Ren lucha con su herencia y su conexión con la Fuerza. Seducido por el Lado Oscuro, busca emular a Darth Vader. Su conflicto interno y relación con Rey son centrales en la trilogía secuela. A lo largo de su viaje, busca redención y finalmente se convierte en Ben Solo, enfrentándose a su destino.",
-    "imagen": "../characters/Ben Solo.png"
+    "descripcion_extendida": "Kylo Ren, nacido como Ben Solo, es un personaje complejo que lucha con su herencia como hijo de Han Solo y Leia Organa. Seducido por el Lado Oscuro bajo la influencia de Snoke y el Emperador Palpatine, Kylo busca emular a su abuelo, Darth Vader, mientras lidia con su conflicto interno. Su relación con Rey, marcada por el odio, la conexión y finalmente la redención, es central en la trilogía secuela. A lo largo de su viaje, Kylo Ren enfrenta sus propios demonios y finalmente encuentra la redención como Ben Solo, sacrificándose para salvar a Rey y restaurar el equilibrio en la galaxia. Su historia es una exploración profunda de la lucha entre el bien y el mal, el legado familiar y el poder de la redención.",
+    "imagen": "../characters/Ben Solo.png",
+    "altura": "189 cm",
+    "peso": "90 kg",
+    "color_cabello": "black",
+    "color_piel": "fair",
+    "color_ojos": "brown",
+    "anio_nacimiento": "5ABY",
+    "genero": "male",
+    "stats": {
+      "poder_fuerza": "85%",
+      "nivel_amenaza": "80%",
+      "dominio_sable_laser": "90%",
+      "estrategia_tactica": "65%"
+    }
   },
   {
     "id": 13,
     "nombre": "Chewbacca",
     "descripcion": "Un leal wookiee y copiloto del Halcón Milenario, Chewbacca es conocido por su fuerza y valentía. Amigo cercano de Han Solo, ha estado en muchas aventuras a lo largo de la saga. Su lealtad y habilidades de combate lo convierten en un aliado invaluable para la Rebelión y la Resistencia, siendo un símbolo de amistad y coraje.",
-    "imagen": "../characters/Chewbacca.png"
+    "descripcion_extendida": "Chewbacca, el icónico wookiee, es un símbolo de fuerza, lealtad y amistad en la saga de Star Wars. Como copiloto del Halcón Milenario, acompañó a Han Solo en innumerables aventuras, desde contrabando hasta la lucha contra el Imperio. Su valentía y habilidades en combate lo convirtieron en un aliado invaluable para la Rebelión y más tarde para la Resistencia. Su relación con Han Solo y su compromiso con sus amigos lo hacen uno de los personajes más queridos de la saga.",
+    "imagen": "../characters/Chewbacca.png",
+    "stats": {
+      "poder_fuerza": "40%",
+      "nivel_amenaza": "60%",
+      "dominio_sable_laser": "30%",
+      "estrategia_tactica": "70%"
+    }
   },
   {
     "id": 3,
     "nombre": "R2-D2",
     "descripcion": "Un astromecánico valiente y leal, R2-D2 ha estado presente en muchos eventos clave de la saga. Su ingenio y habilidades técnicas han salvado a los héroes en numerosas ocasiones. A pesar de ser un droide, R2-D2 muestra una personalidad única y es un símbolo de esperanza y perseverancia en la lucha contra el mal.",
-    "imagen": "../characters/R2-D2.png"
+    "descripcion_extendida": "R2-D2 es mucho más que un droide astromecánico; es un héroe en la saga de Star Wars. Desde ayudar a Anakin Skywalker en las Guerras Clon hasta salvar a la Alianza Rebelde en momentos críticos, R2-D2 ha demostrado ser ingenioso, valiente y leal. Su capacidad para resolver problemas técnicos y su personalidad única lo convierten en un símbolo de esperanza y perseverancia en la lucha contra el mal.",
+    "imagen": "../characters/R2-D2.png",
+    "stats": {
+      "poder_fuerza": "30%",
+      "nivel_amenaza": "40%",
+      "dominio_sable_laser": "20%",
+      "estrategia_tactica": "80%"
+    }
   },
   {
     "id": 2,
     "nombre": "C-3PO",
     "descripcion": "Un droide de protocolo fluido en múltiples idiomas, C-3PO es conocido por su personalidad ansiosa y su lealtad. Acompaña a R2-D2 en muchas aventuras y proporciona un alivio cómico en momentos tensos. Aunque no es un guerrero, su conocimiento y habilidades de comunicación son esenciales para los héroes de la saga.",
-    "imagen": "../characters/C-3PO.png"
+    "descripcion_extendida": "C-3PO, el droide de protocolo fluido en más de seis millones de formas de comunicación, es un personaje esencial en la saga de Star Wars. Aunque a menudo ansioso y propenso a preocuparse, su conocimiento y habilidades de traducción han sido cruciales en muchas misiones. Su relación con R2-D2 y su capacidad para proporcionar alivio cómico lo convierten en un personaje entrañable y memorable.",
+    "imagen": "../characters/C-3PO.png",
+    "stats": {
+      "poder_fuerza": "20%",
+      "nivel_amenaza": "30%",
+      "dominio_sable_laser": "10%",
+      "estrategia_tactica": "70%"
+    }
   },
   {
     "id": 44,
     "nombre": "Darth Maul",
     "descripcion": "Un temido Sith con un aspecto icónico, Darth Maul es conocido por su doble sable de luz y su ferocidad en combate. Aunque fue derrotado por Obi-Wan Kenobi, su legado perdura en la saga. Su búsqueda de venganza y poder lo convierte en un villano memorable, y su regreso en series animadas amplía su historia y complejidad.",
-    "imagen": "../characters/Darth Maul.png"
+    "descripcion_extendida": "Darth Maul, con su doble sable de luz y su apariencia intimidante, es uno de los villanos más icónicos de Star Wars. Aunque fue derrotado por Obi-Wan Kenobi en La Amenaza Fantasma, su historia continuó en series animadas como The Clone Wars y Rebels, donde se exploraron su búsqueda de venganza y su lucha por el poder. Su complejidad como personaje lo convierte en un villano memorable y fascinante.",
+    "imagen": "../characters/Darth Maul.png",
+    "stats": {
+      "poder_fuerza": "80%",
+      "nivel_amenaza": "85%",
+      "dominio_sable_laser": "90%",
+      "estrategia_tactica": "75%"
+    }
   },
   {
     "id": 1003,
     "nombre": "The Mandalorian (Din Djarin)",
     "descripcion": "Un cazarrecompensas solitario en el universo de Star Wars, Din Djarin sigue el código mandaloriano mientras navega por la galaxia. Su relación con Grogu (Baby Yoda) es central en su historia, mostrando su evolución de un guerrero frío a un protector cariñoso. A través de sus aventuras, Din Djarin explora temas de honor, familia y redención.",
-    "imagen": "../characters/The Mandalorian (Din Djarin).png"
+    "descripcion_extendida": "Din Djarin, conocido como The Mandalorian, es un cazarrecompensas solitario que sigue el estricto código mandaloriano mientras navega por los rincones más peligrosos de la galaxia. Su vida cambia drásticamente cuando se encuentra con Grogu (Baby Yoda), un niño sensible a la Fuerza que se convierte en su protegido. A lo largo de sus aventuras, Din Djarin enfrenta desafíos que lo obligan a cuestionar sus creencias y su lealtad al credo mandaloriano. Desde enfrentarse a enemigos poderosos como Moff Gideon hasta forjar alianzas con personajes como Bo-Katan Kryze y Ahsoka Tano, Din Djarin demuestra ser un guerrero valiente y un protector cariñoso. Su historia explora temas profundos como el honor, la familia y la redención, mientras lucha por encontrar su lugar en un universo en constante cambio.",
+    "imagen": "../characters/The Mandalorian (Din Djarin).png",
+    "altura": "180 cm",
+    "peso": "80 kg",
+    "color_cabello": "brown",
+    "color_piel": "fair",
+    "color_ojos": "brown",
+    "anio_nacimiento": "29BBY",
+    "genero": "male",
+    "stats": {
+      "poder_fuerza": "70%",
+      "nivel_amenaza": "75%",
+      "dominio_sable_laser": "65%",
+      "estrategia_tactica": "80%"
+    }
   }
 ]
