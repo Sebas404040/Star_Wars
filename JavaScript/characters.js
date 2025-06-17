@@ -1,57 +1,101 @@
 class characters_StarWars extends HTMLElement {
     constructor() {
       super();
+      this.charactersData = [];
     }
   
     connectedCallback() {
       this.renderCharacters();
+      this.SearchFunctionality();
     }
   
-    async renderCharacters() {
+    async renderCharacters(filteredData = null) {
       try {
-        const response = await fetch("../JSON/characters.json");
-        const characters_data = await response.json();
+          const response = await fetch("../JSON/characters.json");
+          this.charactersData = await response.json();
   
-        const characters = document.createElement("section");
-        characters.id = "characters";
+          const characters = document.createElement("section");
+          characters.id = "characters";
   
-        characters_data.forEach((character, index) => {
-          const character_SW = document.createElement("section");
-          character_SW.classList.add("Personaje");
+          const dataToRender = filteredData || this.charactersData;
   
-          const characterId = character.id || `dynamic-${index}`;
+          if (dataToRender.length === 0) {
+              // Mostrar mensaje cuando no hay personajes
+              characters.innerHTML = `
+                  <div class="no-results">
+                      No se encontraron personajes.
+                  </div>
+              `;
+          } else {
+              dataToRender.forEach((character, index) => {
+                  const character_SW = document.createElement("section");
+                  character_SW.classList.add("Personaje");
   
-          const link = document.createElement("a");
-          link.href = `./Character_SWinfo.html?id=${characterId}`; 
+                  const link = document.createElement("a");
+                  link.href = `./Character_SWinfo.html?id=${character.id}`;
   
-          const img = document.createElement("img");
-          img.src = character.imagen || "../characters/default.png"; 
-          img.alt = character.nombre || "Personaje desconocido";
-          img.classList.add("imagen_personajes");
+                  const img = document.createElement("img");
+                  img.src = character.imagen || "../characters/default.png";
+                  img.alt = character.nombre || "Personaje desconocido";
+                  img.classList.add("imagen_personajes");
   
-          const character_info = document.createElement("div");
-          character_info.classList.add("Personajes_descripcion");
+                  const character_info = document.createElement("div");
+                  character_info.classList.add("Personajes_descripcion");
   
-          const nombre_character = document.createElement("h3");
-          nombre_character.textContent = character.nombre || "Nombre no disponible";
+                  const nombre_character = document.createElement("h3");
+                  nombre_character.textContent = character.nombre || "Nombre no disponible";
   
-          const descripcion = document.createElement("p");
-          descripcion.textContent = character.descripcion || "Descripción no disponible";
+                  const descripcion = document.createElement("p");
+                  descripcion.textContent = character.descripcion || "Descripción no disponible";
   
-          link.appendChild(img);
-          character_info.appendChild(nombre_character);
-          character_info.appendChild(descripcion);
-          character_SW.appendChild(link);
-          character_SW.appendChild(character_info);
-          characters.appendChild(character_SW);
-        });
+                  link.appendChild(img);
+                  character_info.appendChild(nombre_character);
+                  character_info.appendChild(descripcion);
+                  character_SW.appendChild(link);
+                  character_SW.appendChild(character_info);
+                  characters.appendChild(character_SW);
+              });
+          }
   
-        this.appendChild(characters);
+          this.innerHTML = "";
+          this.appendChild(characters);
       } catch (error) {
-        console.error("Error en la obtención de datos:", error);
+          console.error("Error en la obtención de datos:", error);
       }
-    }
   }
+  SearchFunctionality() {
+    const searchInput = document.querySelector(".Barra_busqueda");
+    const filtroPeliculasBtn = document.querySelector("#filtro_Star_Wars");
+    const filtroPeliculasSelect = document.querySelector("#filtro_peliculas");
+
+    if (!searchInput || !filtroPeliculasBtn || !filtroPeliculasSelect) return;
+
+    // Mostrar el <select> al pulsar el botón
+    filtroPeliculasBtn.addEventListener("click", () => {
+        filtroPeliculasSelect.style.display = filtroPeliculasSelect.style.display === "none" ? "block" : "none";
+    });
+
+    // Filtrar personajes por nombre
+    searchInput.addEventListener("input", (event) => {
+        const searchTerm = event.target.value.toLowerCase();
+        const filteredData = this.charactersData.filter((character) =>
+            character.nombre.toLowerCase().includes(searchTerm)
+        );
+        this.renderCharacters(filteredData);
+    });
+
+    // Filtrar personajes por película
+    filtroPeliculasSelect.addEventListener("change", (event) => {
+        const selectedMovie = event.target.value;
+        const filteredData = this.charactersData.filter((character) =>
+            character.peliculas && character.peliculas.includes(selectedMovie)
+        );
+        this.renderCharacters(filteredData);
+    });
+}
+  }
+
+  
   
   customElements.define("characters-sw", characters_StarWars);
   

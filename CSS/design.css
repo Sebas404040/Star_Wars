@@ -38,6 +38,7 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    justify-content: start;
     color: aliceblue;
     font-size: 1.5rem;
     font-family: "Star jedi";
@@ -200,6 +201,7 @@ h1 {
 
 
 #characters {
+    min-height: 300px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     gap: 20px; 
@@ -239,8 +241,70 @@ h3 {
 }
 
 #filtro_Star_Wars {
+    background-color: #000; 
+    color: #ffe81f; 
+    font-family: 'Star Jedi', sans-serif; 
+    font-size: 1.2rem;
+    border: 2px solid #ffe81f; 
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
     width: 40px;
-    margin-top: auto;
+}
+
+#filtro_Star_Wars:hover {
+    background-color: #ffe81f;
+    color: #000; 
+    transform: scale(1.1); 
+}
+
+/* Select de películas */
+#filtro_peliculas {
+    display: none; 
+    background-color: #000; 
+    color: #ffe81f;
+    font-family: 'Star Jedi', sans-serif; 
+    font-size: 1rem;
+    border: 2px solid #ffe81f; 
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    box-shadow: 0 0 10px #ffe81f; 
+}
+
+#filtro_peliculas option {
+    background-color: #000; 
+    color: #ffe81f;
+    padding: 5px;
+}
+
+/* Contenedor del filtro */
+.buscar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    margin-bottom: 20px;
+}
+
+.buscar input {
+    background-color: #000; 
+    color: #ffe81f; 
+    font-family: 'Star Jedi', sans-serif; 
+    font-size: 1rem;
+    border: 2px solid #ffe81f; 
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-shadow: 0 0 10px #ffe81f;
+}
+
+.buscar input::placeholder {
+    color: #ffe81f; 
+    opacity: 0.8;
 }
 
 .buscar {
