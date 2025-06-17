@@ -61,45 +61,96 @@ class characters_StarWars extends HTMLElement {
   
     if (idPersonaje) {
       try {
-        const response = await fetch(`https://www.swapi.tech/api/people/${idPersonaje}`);
-        if (response.ok) {
-          const data = await response.json();
-          const personaje = data.result.properties;
+        let personaje = null;
   
-          document.querySelector("#nombre_personaje").textContent = personaje.name;
+        // api de star wars, uso
+        const apiResponse = await fetch(`https://www.swapi.tech/api/people/${idPersonaje}`);
+        if (apiResponse.ok) {
+          const apiData = await apiResponse.json();
+          personaje = apiData.result.properties;
   
+      
+          document.querySelector("#nombre_personaje").textContent = personaje.name || "Nombre no disponible";
+  
+      
           const biografiaContainer = document.querySelector("#biografia_personaje");
-          biografiaContainer.innerHTML = "";
+          biografiaContainer.textContent = ""; 
   
-          biografiaContainer.appendChild(createInfoParagraph("Altura", `${personaje.height} cm`));
-          biografiaContainer.appendChild(createInfoParagraph("Peso", `${personaje.mass} kg`));
-          biografiaContainer.appendChild(createInfoParagraph("Color de cabello", personaje.hair_color));
-          biografiaContainer.appendChild(createInfoParagraph("Color de piel", personaje.skin_color));
-          biografiaContainer.appendChild(createInfoParagraph("Color de ojos", personaje.eye_color));
-          biografiaContainer.appendChild(createInfoParagraph("Año de nacimiento", personaje.birth_year));
-          biografiaContainer.appendChild(createInfoParagraph("Género", personaje.gender));
+          biografiaContainer.appendChild(createInfoParagraph("Altura", personaje.height || "Altura no disponible"));
+          biografiaContainer.appendChild(createInfoParagraph("Peso", personaje.mass || "Peso no disponible"));
+          biografiaContainer.appendChild(createInfoParagraph("Color de cabello", personaje.hair_color || "Color de cabello no disponible"));
+          biografiaContainer.appendChild(createInfoParagraph("Color de piel", personaje.skin_color || "Color de piel no disponible"));
+          biografiaContainer.appendChild(createInfoParagraph("Color de ojos", personaje.eye_color || "Color de ojos no disponible"));
+          biografiaContainer.appendChild(createInfoParagraph("Año de nacimiento", personaje.birth_year || "Año de nacimiento no disponible"));
+          biografiaContainer.appendChild(createInfoParagraph("Género", personaje.gender || "Género no disponible"));
   
+          // Mostrar imagen del personaje desde el archivo local si está disponible (ERROR del CRITICAL FIx)
           const localResponse = await fetch("../JSON/characters.json");
           const localData = await localResponse.json();
           const personajeLocal = localData.find((character) => character.id == idPersonaje);
   
-          if (personajeLocal) {
+          if (personajeLocal && personajeLocal.imagen) {
             document.querySelector(".imagen_personaje_info").src = personajeLocal.imagen;
           } else {
-            document.querySelector(".imagen_personaje_info").src = "../characters/default.png"; 
+            document.querySelector(".imagen_personaje_info").src = "../characters/default.png"; // Imagen predeterminada por si no aparece la de la api 
+          }
+  
+          
+          const statsDiv = document.querySelector("#stats");
+          if (statsDiv && personajeLocal && personajeLocal.stats) {
+            statsDiv.textContent = "";
+  
+            const statMap = [
+              { key: "poder_fuerza", label: "Poder en la fuerza", color: "#00bfff" },
+              { key: "nivel_amenaza", label: "Nivel de amenaza", color: "#ff4b4b" },
+              { key: "dominio_sable_laser", label: "Dominio del sable láser", color: "#00ff00" },
+              { key: "estrategia_tactica", label: "Estrategia táctica", color: "#ffa500" }
+            ];
+  
+            statMap.forEach(stat => {
+              const value = personajeLocal.stats[stat.key] || "0%";
+  
+              const statSection = document.createElement("div");
+              statSection.className = "stat";
+  
+              const span = document.createElement("span");
+              span.textContent = stat.label;
+  
+              const barContainer = document.createElement("div");
+              barContainer.className = "bar-container";
+  
+              const bar = document.createElement("div");
+              bar.className = "bar";
+              bar.style.width = value;
+              bar.style.backgroundColor = stat.color;
+  
+              barContainer.appendChild(bar);
+              statSection.appendChild(span);
+              statSection.appendChild(barContainer);
+  
+              statsDiv.appendChild(statSection);
+            });
           }
         } else {
-          console.warn("Personaje no encontrado en la API. Buscando en el archivo local...");
+          console.warn(`Personaje no encontrado en la API: ${apiResponse.status}`);
+        }
+  
+        // Si no se encuentra en la API, buscar en el archivo local
+        if (!personaje) {
           const localResponse = await fetch("../JSON/characters.json");
           const localData = await localResponse.json();
           const personajeLocal = localData.find((character) => character.id == idPersonaje);
   
           if (personajeLocal) {
-            document.querySelector("#nombre_personaje").textContent = personajeLocal.nombre || "Nombre no disponible";
-            document.querySelector(".imagen_personaje_info").src = personajeLocal.imagen || "../characters/default.png";
+            personaje = personajeLocal;
   
+            // Mostrar nombre del personaje
+            document.querySelector("#nombre_personaje").textContent = personajeLocal.nombre || "Nombre no disponible";
+  
+            
             const biografiaContainer = document.querySelector("#biografia_personaje");
-            biografiaContainer.textc = "";
+            biografiaContainer.textContent = ""; 
+  
             biografiaContainer.appendChild(createInfoParagraph("Altura", personajeLocal.altura || "Altura no disponible"));
             biografiaContainer.appendChild(createInfoParagraph("Peso", personajeLocal.peso || "Peso no disponible"));
             biografiaContainer.appendChild(createInfoParagraph("Color de cabello", personajeLocal.color_cabello || "Color de cabello no disponible"));
@@ -107,6 +158,46 @@ class characters_StarWars extends HTMLElement {
             biografiaContainer.appendChild(createInfoParagraph("Color de ojos", personajeLocal.color_ojos || "Color de ojos no disponible"));
             biografiaContainer.appendChild(createInfoParagraph("Año de nacimiento", personajeLocal.anio_nacimiento || "Año de nacimiento no disponible"));
             biografiaContainer.appendChild(createInfoParagraph("Género", personajeLocal.genero || "Género no disponible"));
+  
+          
+            document.querySelector(".imagen_personaje_info").src = personajeLocal.imagen || "../characters/default.png";
+  
+            // Mostrar estadísticas en barras
+            const statsDiv = document.querySelector("#stats");
+            if (statsDiv && personajeLocal.stats) {
+              statsDiv.textContent = ""; 
+  
+              const statMap = [
+                { key: "poder_fuerza", label: "Poder en la fuerza", color: "#00bfff" },
+                { key: "nivel_amenaza", label: "Nivel de amenaza", color: "#ff4b4b" },
+                { key: "dominio_sable_laser", label: "Dominio del sable láser", color: "#00ff00" },
+                { key: "estrategia_tactica", label: "Estrategia táctica", color: "#ffa500" }
+              ];
+  
+              statMap.forEach(stat => {
+                const value = personajeLocal.stats[stat.key] || "0%";
+  
+                const statSection = document.createElement("div");
+                statSection.className = "stat";
+  
+                const span = document.createElement("span");
+                span.textContent = stat.label;
+  
+                const barContainer = document.createElement("div");
+                barContainer.className = "bar-container";
+  
+                const bar = document.createElement("div");
+                bar.className = "bar";
+                bar.style.width = value;
+                bar.style.backgroundColor = stat.color;
+  
+                barContainer.appendChild(bar);
+                statSection.appendChild(span);
+                statSection.appendChild(barContainer);
+  
+                statsDiv.appendChild(statSection);
+              });
+            }
           } else {
             console.error("Personaje no encontrado en el archivo local.");
           }
