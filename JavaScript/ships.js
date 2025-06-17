@@ -1,54 +1,174 @@
 class ships_StarWars extends HTMLElement {
     constructor() {
         super();
+        this.shipsData = [];
     }
 
     connectedCallback() {
         this.renderShips();
+        this.setupSearchAndFilter();
     }
 
-    async renderShips() {
+    async renderShips(filteredData = null) {
         try {
-            const response = await fetch("../JSON/ships.json"); 
-            const ships_data = await response.json();
+            const localResponse = await fetch("../JSON/ships.json");
+            this.shipsData = await localResponse.json();
+            const dataToRender = filteredData || this.shipsData;
 
             const ships = document.createElement("section");
             ships.id = "naves";
 
-            ships_data.forEach(nave => {
-                const ship_SW = document.createElement("div");
-                ship_SW.classList.add("nave");
+            if (dataToRender.length === 0) {
+                ships.innerHTML = `<div class="no-results">No se encontraron naves.</div>`;
+            } else {
+                dataToRender.forEach(nave => {
+                    const shipCard = document.createElement("div");
+                    shipCard.classList.add("nave");
 
-                const link = document.createElement("a");
-                link.href = "#";
+                    const link = document.createElement("a");
+                    link.href = `./Ship_SWinfo.html?id=${nave.id}`;
 
-                const img = document.createElement("img");
-                img.src = nave.imagen;
-                img.alt = nave.nombre;
-                img.classList.add("imagen_naves");
+                    const img = document.createElement("img");
+                    img.src = nave.imagen || "../ships/default.png";
+                    img.alt = nave.nombre;
+                    img.classList.add("imagen_naves");
 
-                const ship_info = document.createElement("section");
-                ship_info.classList.add("descripcion_nave");
+                    const info = document.createElement("section");
+                    info.classList.add("descripcion_nave");
 
-                const nombre_nave = document.createElement("h3");
-                nombre_nave.textContent = nave.nombre;
+                    const title = document.createElement("h3");
+                    title.textContent = nave.nombre;
 
-                const descripcion = document.createElement("p");
-                descripcion.textContent = nave.descripcion;
+                    const desc = document.createElement("p");
+                    desc.textContent = nave.descripcion;
 
-                link.appendChild(img);
-                ship_info.appendChild(nombre_nave);
-                ship_info.appendChild(descripcion);
-                ship_SW.appendChild(link);
-                ship_SW.appendChild(ship_info);
-                ships.appendChild(ship_SW);
-            });
+                    link.appendChild(img);
+                    info.appendChild(title);
+                    info.appendChild(desc);
+                    shipCard.appendChild(link);
+                    shipCard.appendChild(info);
+                    ships.appendChild(shipCard);
+                });
+            }
 
-            this.appendChild(ships); 
+            this.innerHTML = "";
+            this.appendChild(ships);
         } catch (error) {
-            console.error("Error en la obtención de datos:", error);
+            console.error("Error al renderizar naves:", error);
         }
+    }
+
+    setupSearchAndFilter() {
+        const searchInput = document.querySelector(".Barra_busqueda");
+        const filterButton = document.querySelector("#filtro_Star_Wars");
+        const filterSelect = document.querySelector("#filtro_peliculas");
+
+        if (!searchInput || !filterButton || !filterSelect) return;
+
+        filterButton.addEventListener("click", () => {
+            filterSelect.style.display = filterSelect.style.display === "none" ? "block" : "none";
+        });
+
+        searchInput.addEventListener("input", (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const filtered = this.shipsData.filter(nave =>
+                nave.nombre.toLowerCase().includes(searchTerm)
+            );
+            this.renderShips(filtered);
+        });
+
+        filterSelect.addEventListener("change", (e) => {
+            const selectedMovie = e.target.value;
+            const filtered = this.shipsData.filter(nave =>
+                nave.peliculas && nave.peliculas.includes(selectedMovie)
+            );
+            this.renderShips(filtered);
+        });
     }
 }
 
 customElements.define("ships-sw", ships_StarWars);
+
+
+document.addEventListener("DOMContentLoaded", async () => {
+    const params = new URLSearchParams(window.location.search);
+    const idNave = params.get("id");
+
+    if (!idNave) {
+        console.error("No se proporcionó un ID de nave en la URL");
+        return;
+    }
+
+    const statsContainer = document.querySelector("#stats_ships");
+    statsContainer.innerHTML = ""; // ✅ Limpiar estadísticas previas
+
+    try {
+        // 🔗 1. INTENTAR obtener desde la API de Star Wars
+        const apiResponse = await fetch(`https://www.swapi.tech/api/starships/${idNave}`);
+
+        if (apiResponse.ok) {
+            const apiData = await apiResponse.json();
+            const naveAPI = apiData.result.properties;
+
+            document.querySelector("h1").textContent = naveAPI.name || "Nombre no disponible";
+
+            document.querySelector("#descripcion").textContent =
+                `Fabricante: ${naveAPI.manufacturer || "N/A"}. Modelo: ${naveAPI.model || "N/A"}. Clase: ${naveAPI.starship_class || "N/A"}.`;
+
+            renderBar("Velocidad máxima", naveAPI.max_atmosphering_speed || 0, 1500);
+            renderBar("Blindaje", 70, 100); // valor ficticio si API no lo tiene
+            renderBar("Capacidad de carga", naveAPI.cargo_capacity || 0, 100000);
+            renderBar("Armamento", 40, 100); // valor ficticio si API no lo tiene
+
+            return; // ✅ Evitamos que se ejecute la búsqueda local
+        }
+
+        // 🔄 2. SI NO EXISTE EN LA API o falla, buscar en archivo local
+        const localResponse = await fetch("../JSON/ships.json");
+        const localData = await localResponse.json();
+        const naveLocal = localData.find(n => n.id == idNave); // ✅ doble igual
+
+        if (naveLocal) {
+            document.querySelector("h1").textContent = naveLocal.nombre;
+            document.querySelector("#descripcion").textContent = naveLocal.descripcion;
+            document.querySelector(".imagen_nave").src = naveLocal.imagen || "../ships/default.png";
+
+            const stats = naveLocal.stats || {};
+            renderBar("Velocidad máxima", parseInt(stats.velocidad) || 0, 100);
+            renderBar("Blindaje", parseInt(stats.blindaje) || 0, 100);
+            renderBar("Capacidad de carga", parseInt(stats.carga) || 0, 100);
+            renderBar("Armamento", parseInt(stats.armamento) || 0, 100);
+        } else {
+            console.warn("Nave no encontrada en archivo local.");
+        }
+
+    } catch (error) {
+        console.error("Error al obtener la información de la nave:", error);
+    }
+
+    function renderBar(label, valor, max) {
+        const section = document.createElement("div");
+        section.className = "stat_ship";
+
+        const span = document.createElement("span");
+        span.textContent = `${label}:`;
+
+        const barContainer = document.createElement("div");
+        barContainer.className = "bar-container";
+
+        const bar = document.createElement("div");
+        bar.className = "bar";
+
+        const porcentaje = typeof valor === "string" && valor.includes("%")
+            ? valor
+            : `${Math.min((valor / max) * 100, 100)}%`;
+
+        bar.style.width = porcentaje;
+        if (label === "Armamento") bar.style.backgroundColor = "#ff4b4b";
+
+        barContainer.appendChild(bar);
+        section.appendChild(span);
+        section.appendChild(barContainer);
+        statsContainer.appendChild(section);
+    }
+});
