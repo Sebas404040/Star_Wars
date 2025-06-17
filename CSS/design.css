@@ -328,6 +328,38 @@ h3 {
   transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
 }
 
+strong {
+    font-family: "Star Jedi";
+}
+
+.bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .bar {
+    height: 20px;
+    background-color: #4caf50;
+    border-radius: 5px;
+  }
+
+#biografia_personaje {
+    color: white;
+    border: 2px solid rgb(255, 0, 0);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px red ;
+}
+
+#info_personaje {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-family: "AutoWide";
+}
+
 #fondo_perfil_personaje {
     background-image: url("../photos/Fondo\ personaje2.jpg");
     background-repeat: no-repeat;
