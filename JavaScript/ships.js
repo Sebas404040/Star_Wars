@@ -103,48 +103,60 @@ document.addEventListener("DOMContentLoaded", async () => {
     statsContainer.innerHTML = ""; // ✅ Limpiar estadísticas previas
 
     try {
-        // 🔗 1. INTENTAR obtener desde la API de Star Wars
-        const apiResponse = await fetch(`https://www.swapi.tech/api/starships/${idNave}`);
+    // 🔗 1. INTENTAR obtener desde la API de Star Wars
+    const apiResponse = await fetch(`https://www.swapi.tech/api/starships/${idNave}`);
 
-        if (apiResponse.ok) {
-            const apiData = await apiResponse.json();
-            const naveAPI = apiData.result.properties;
+    if (apiResponse.ok) {
+        const apiData = await apiResponse.json();
+        const naveAPI = apiData.result.properties;
 
-            document.querySelector("h1").textContent = naveAPI.name || "Nombre no disponible";
+        document.querySelector("h1").textContent = naveAPI.name || "Nombre no disponible";
 
-            document.querySelector("#descripcion").textContent =
-                `Fabricante: ${naveAPI.manufacturer || "N/A"}. Modelo: ${naveAPI.model || "N/A"}. Clase: ${naveAPI.starship_class || "N/A"}.`;
+        document.querySelector("#descripcion").textContent =
+            `Fabricante: ${naveAPI.manufacturer || "N/A"}. Modelo: ${naveAPI.model || "N/A"}. Clase: ${naveAPI.starship_class || "N/A"}.`;
 
-            renderBar("Velocidad máxima", naveAPI.max_atmosphering_speed || 0, 1500);
-            renderBar("Blindaje", 70, 100); // valor ficticio si API no lo tiene
-            renderBar("Capacidad de carga", naveAPI.cargo_capacity || 0, 100000);
-            renderBar("Armamento", 40, 100); // valor ficticio si API no lo tiene
+        renderBar("Velocidad máxima", naveAPI.max_atmosphering_speed || 0, 1500);
+        renderBar("Blindaje", 70, 100);
+        renderBar("Capacidad de carga", naveAPI.cargo_capacity || 0, 100000);
+        renderBar("Armamento", 40, 100);
 
-            return; // ✅ Evitamos que se ejecute la búsqueda local
-        }
-
-        // 🔄 2. SI NO EXISTE EN LA API o falla, buscar en archivo local
+        // ✅ Obtener imagen desde el JSON local
         const localResponse = await fetch("../JSON/ships.json");
         const localData = await localResponse.json();
-        const naveLocal = localData.find(n => n.id == idNave); // ✅ doble igual
+        const naveLocal = localData.find(n => n.id == idNave);
 
-        if (naveLocal) {
-            document.querySelector("h1").textContent = naveLocal.nombre;
-            document.querySelector("#descripcion").textContent = naveLocal.descripcion;
-            document.querySelector(".imagen_nave").src = naveLocal.imagen || "../ships/default.png";
-
-            const stats = naveLocal.stats || {};
-            renderBar("Velocidad máxima", parseInt(stats.velocidad) || 0, 100);
-            renderBar("Blindaje", parseInt(stats.blindaje) || 0, 100);
-            renderBar("Capacidad de carga", parseInt(stats.carga) || 0, 100);
-            renderBar("Armamento", parseInt(stats.armamento) || 0, 100);
+        if (naveLocal && naveLocal.imagen) {
+            document.querySelector(".imagen_nave").src = naveLocal.imagen;
         } else {
-            console.warn("Nave no encontrada en archivo local.");
+            document.querySelector(".imagen_nave").src = "../ships/default.png";
         }
 
-    } catch (error) {
-        console.error("Error al obtener la información de la nave:", error);
+        return; // 🔚 Salir solo después de intentar imagen
     }
+
+    // 🔄 2. SI NO EXISTE EN LA API o falla, buscar todo en archivo local
+    const localResponse = await fetch("../JSON/ships.json");
+    const localData = await localResponse.json();
+    const naveLocal = localData.find(n => n.id == idNave);
+
+    if (naveLocal) {
+        document.querySelector("h1").textContent = naveLocal.nombre;
+        document.querySelector("#descripcion").textContent = naveLocal.descripcion;
+        document.querySelector(".imagen_nave").src = naveLocal.imagen || "../ships/default.png";
+
+        const stats = naveLocal.stats || {};
+        renderBar("Velocidad máxima", stats["Velocidad máxima"] || "0%", 100);
+        renderBar("Blindaje", stats["Blindaje"] || "0%", 100);
+        renderBar("Capacidad de carga", stats["Capacidad de carga"] || "0%", 100);
+        renderBar("Armamento", stats["Armamento"] || "0%", 100);
+    } else {
+        console.warn("Nave no encontrada en archivo local.");
+    }
+
+} catch (error) {
+    console.error("Error al obtener la información de la nave:", error);
+}
+
 
     function renderBar(label, valor, max) {
         const section = document.createElement("div");
