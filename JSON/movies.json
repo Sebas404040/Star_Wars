@@ -1,37 +1,44 @@
 [
-    {
-      "nombre": "Episodio IV: Una Nueva Esperanza",
-      "anio": 1977,
-      "imagen": "../Movies/A New Hope.png"
-    },
-    {
-      "nombre": "Episodio II: El Ataque de los Clones",
-      "anio": 2002,
-      "imagen": "../Movies/Attack of the Clones.png"
-    },
-    {
-      "nombre": "Episodio VI: El Regreso del Jedi",
-      "anio": 1983,
-      "imagen": "../Movies/Return of the Jedi.png"
-    },
-    {
-      "nombre": "Episodio III: La Venganza de los Sith",
-      "anio": 2005,
-      "imagen": "../Movies/Revenge of the Sith.png"
-    },
-    {
-      "nombre": "Episodio V: El Imperio Contraataca",
-      "anio": 1980,
-      "imagen": "../Movies/The Empire Strikes Back.png"
-    },
-    {
-      "nombre": "Episodio VII: El Despertar de la Fuerza",
-      "anio": 2015,
-      "imagen": "../Movies/The Force Awakens.png"
-    },
-    {
-      "nombre": "Episodio I: La Amenaza Fantasma",
-      "anio": 1999,
-      "imagen": "../Movies/The Phantom Menace.png"
-    }
-  ]
+  {
+    "id": 1,
+    "nombre": "Episodio IV: Una Nueva Esperanza",
+    "year": 1977,
+    "imagen": "../Movies/A New Hope.png"
+  },
+  {
+    "id": 2,
+    "nombre": "Episodio V: El Imperio Contraataca",
+    "year": 1980,
+    "imagen": "../Movies/The Empire Strikes Back.png"
+  },
+  {
+    "id": 3,
+    "nombre": "Episodio VI: El Regreso del Jedi",
+    "year": 1983,
+    "imagen": "../Movies/Return of the Jedi.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Episodio I: La Amenaza Fantasma",
+    "year": 1999,
+    "imagen": "../Movies/The Phantom Menace.png"
+  },
+  {
+    "id": 5,
+    "nombre": "Episodio II: El Ataque de los Clones",
+    "year": 2002,
+    "imagen": "../Movies/Attack of the Clones.png"
+  },
+  {
+    "id": 6,
+    "nombre": "Episodio III: La Venganza de los Sith",
+    "year": 2005,
+    "imagen": "../Movies/Revenge of the Sith.png"
+  },
+  {
+    "id": 7,
+    "nombre": "Episodio VII: El Despertar de la Fuerza",
+    "year": 2015,
+    "imagen": "../Movies/The Force Awakens.png"
+  }
+]
