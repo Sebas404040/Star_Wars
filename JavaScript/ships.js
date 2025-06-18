@@ -100,10 +100,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     const statsContainer = document.querySelector("#stats_ships");
-    statsContainer.innerHTML = ""; // ✅ Limpiar estadísticas previas
+    statsContainer.innerHTML = ""; 
 
     try {
-    // 🔗 1. INTENTAR obtener desde la API de Star Wars
     const apiResponse = await fetch(`https://www.swapi.tech/api/starships/${idNave}`);
 
     if (apiResponse.ok) {
@@ -120,7 +119,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         renderBar("Capacidad de carga", naveAPI.cargo_capacity || 0, 100000);
         renderBar("Armamento", 40, 100);
 
-        // ✅ Obtener imagen desde el JSON local
+        
         const localResponse = await fetch("../JSON/ships.json");
         const localData = await localResponse.json();
         const naveLocal = localData.find(n => n.id == idNave);
@@ -131,10 +130,10 @@ document.addEventListener("DOMContentLoaded", async () => {
             document.querySelector(".imagen_nave").src = "../ships/default.png";
         }
 
-        return; // 🔚 Salir solo después de intentar imagen
+        return;
     }
 
-    // 🔄 2. SI NO EXISTE EN LA API o falla, buscar todo en archivo local
+
     const localResponse = await fetch("../JSON/ships.json");
     const localData = await localResponse.json();
     const naveLocal = localData.find(n => n.id == idNave);
