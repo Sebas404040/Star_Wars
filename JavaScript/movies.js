@@ -1,6 +1,7 @@
-class movies_StarWars extends HTMLElement {
+class MoviesStarWars extends HTMLElement {
     constructor() {
         super();
+        this.moviesData = [];
     }
 
     connectedCallback() {
@@ -9,46 +10,96 @@ class movies_StarWars extends HTMLElement {
 
     async renderMovies() {
         try {
-            const response = await fetch("../JSON/movies.json"); 
-            const movies_data = await response.json();
+            const response = await fetch("../JSON/movies.json");
+            this.moviesData = await response.json();
 
-            const movies = document.createElement("section");
-            movies.id = "peliculas";
+            const grid = document.createElement("section");
+            grid.id = "peliculas"; // 
 
-            movies_data.forEach(movie => {
-                const movie_SW = document.createElement("div");
-                movie_SW.classList.add("pelicula");
+            this.moviesData.forEach((movie, index) => {
+                const card = document.createElement("div");
+                card.className = "pelicula"; 
 
                 const link = document.createElement("a");
-                link.href = "#";
+                link.href = `./movie_info.html?id=${index + 1}`; 
 
-                const img = document.createElement("img");
-                img.src = movie.imagen;
-                img.alt = movie.nombre;
-                img.classList.add("imagen_peliculas");
+                const image = document.createElement("img");
+                image.src = movie.imagen || "../Movies/default.png";
+                image.alt = movie.nombre;
+                image.className = "imagen_peliculas"; 
 
-                const movie_info = document.createElement("section");
-                movie_info.classList.add("descripcion_pelicula");
+                const title = document.createElement("h3");
+                title.textContent = `${movie.nombre} (${movie.year})`;
 
-                const nombre_movie = document.createElement("h3");
-                nombre_movie.textContent = movie.nombre;
-
-                const descripcion = document.createElement("p");
-                descripcion.textContent = movie.descripcion;
-
-                link.appendChild(img);
-                movie_info.appendChild(nombre_movie);
-                movie_info.appendChild(descripcion);
-                movie_SW.appendChild(link);
-                movie_SW.appendChild(movie_info);
-                movies.appendChild(movie_SW);
+                link.appendChild(image);
+                card.appendChild(link);
+                card.appendChild(title);
+                grid.appendChild(card);
             });
 
-            this.appendChild(movies); 
+            this.innerHTML = "";
+            this.appendChild(grid);
         } catch (error) {
-            console.error("Error en la obtención de datos:", error);
+            console.error("Error al cargar películas:", error);
         }
     }
 }
 
-customElements.define("movies-sw", movies_StarWars);
+customElements.define("movies-sw", MoviesStarWars);
+
+document.addEventListener("DOMContentLoaded", async () => {
+    const params = new URLSearchParams(window.location.search);
+    const movieId = params.get("id");
+
+    if (!movieId) return;
+
+    const image = document.querySelector("#imagen_descripcion_pelicula");
+    const titleSection = document.querySelector(".titulo_pelicula h3");
+    const description = document.querySelector("#descripcionInfo_pelicula");
+
+    try {
+  
+        const localRes = await fetch("../JSON/movies.json");
+        const localData = await localRes.json();
+        const movieLocal = localData.find(m => m.id == movieId);
+        if (movieLocal) {
+            image.src = movieLocal.imagen || "../Movies/default.png";
+            titleSection.textContent = `${movieLocal.nombre} (${movieLocal.year})`;
+        }
+
+        const apiRes = await fetch(`https://www.swapi.tech/api/films/${movieId}`);
+        if (!apiRes.ok) {
+            const fallback = document.createElement("p");
+            fallback.textContent = "No se pudo obtener información desde la API.";
+            description.appendChild(fallback);
+            return;
+        }
+
+        const apiData = await apiRes.json();
+        const props = apiData.result.properties;
+
+
+        description.appendChild(createInfoParagraph("Título original", props.title));
+        description.appendChild(createInfoParagraph("Director", props.director));
+        description.appendChild(createInfoParagraph("Productor", props.producer));
+        description.appendChild(createInfoParagraph("Fecha de estreno", props.release_date));
+        description.appendChild(createInfoParagraph("Sinopsis", props.opening_crawl));
+
+    } catch (error) {
+        console.error("Error al mostrar detalles de la película:", error);
+        const errorText = document.createElement("p");
+        errorText.textContent = "Error al cargar los datos.";
+        description.appendChild(errorText);
+    }
+
+
+    function createInfoParagraph(label, value) {
+        const p = document.createElement("p");
+        const strong = document.createElement("strong");
+        strong.textContent = `${label}: `;
+        p.appendChild(strong);
+        p.append(value);
+        return p;
+    }
+});
+
