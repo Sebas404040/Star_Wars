@@ -1,19 +1,61 @@
-# Star Wars Fan Page
+# ⭐ Star Wars Fan Page — *Explora la Galaxia como Nunca Antes*
 
-Bienvenido a la Fan Page de Star Wars, un proyecto dedicado a los fanáticos de esta increíble saga. Aquí podrás explorar información sobre los personajes, naves y películas, además de disfrutar de una página de inicio interactiva.
+¡Bienvenido al universo de Star Wars! Esta fan page es un homenaje interactivo y visualmente atractivo a la saga más épica de la historia del cine. 🌌
 
-## Características del Proyecto
+Aquí podrás descubrir personajes, naves y películas, con vistas detalladas, información dinámica desde APIs, filtros inteligentes, y una experiencia optimizada tanto para escritorio como para dispositivos móviles.
 
-- **Página de Inicio**: Una introducción interactiva al mundo de Star Wars.
-- **Personajes**: Información detallada sobre los personajes más icónicos de la saga.
-- **Naves**: Descubre las naves espaciales que han marcado la historia de Star Wars.
-- **Películas**: Explora las películas que conforman esta épica franquicia.
+---
 
-## Tecnologías Utilizadas
+## 🚀 Características
 
-- HTML
-- CSS
-- JavaScript
+✅ **Exploración de personajes**  
+Visualiza una galería completa con descripciones, imágenes, afiliaciones y películas donde aparece cada personaje.
+
+✅ **Catálogo de naves**  
+Desde el icónico Millennium Falcon hasta el TIE Fighter. Cada nave cuenta con imagen, estadísticas, descripción y referencias cinematográficas.
+
+✅ **Base de datos de películas**  
+Navega por la cronología oficial, obtén detalles de cada episodio y su contenido visual.
+
+✅ **Filtros y búsqueda en tiempo real**  
+Filtra personajes y naves por película o búscalos por nombre. Rápido, eficiente y fluido.
+
+✅ **Integración con API externa**  
+El sistema consulta primero la API oficial de Star Wars y, si no obtiene resultados, usa una base de datos local de respaldo.
+
+✅ **Responsive Design 100%**  
+Diseño adaptable para computadoras, tablets y smartphones, con estilos inspirados en Star Wars (fuentes galácticas, botones temáticos y colores cinematográficos).
+
+✅ **Componentes personalizados**  
+Uso de etiquetas personalizadas como `<characters-sw>` y `<ships-sw>` para una arquitectura más limpia y mantenible.
+
+---
+
+## 📁 Estructura del proyecto
+
+```
+├── index.html
+├── HTML/
+│ ├── Characters_SW.html
+│ ├── Ships_page.html
+│ ├── movies_page.html
+│ └── ship_info.html
+├── CSS/
+│ └── design.css
+├── JavaScript/
+│ ├── characters.js
+│ ├── ships.js
+│ └── movies.js
+├── JSON/
+│ ├── characters.json
+│ ├── ships.json
+│ └── movies.json
+├── icons/
+│ └── [iconos de Star Wars]
+├── photos/
+│ └── [imágenes de personajes y naves]
+└── README.md
+```
 
 ## Maquetación y Diseño
 
@@ -54,39 +96,39 @@ La maquetación se realiza utilizando **HTML** y **CSS**, mientras que **JavaScr
 ### Movies info
 ![Movie info](./Readme_images/movie%20info-9.png "Movie info")
 
+## 🔧 Tecnologías utilizadas
+
+- HTML5 + CSS3 + JavaScript
+- Componentes Web (etiquetas personalizadas)
+- Fetch API + manejo de errores
+- JSON estructurado (personajes, naves, películas)
+- Responsive Design 
+- Fuentes temáticas de Star Wars
+
+---
+
+## ✨ ¿Qué sigue?
+
+- [ ] Sistema de favoritos con LocalStorage
+- [ ] Reproductor musical con temas icónicos
+- [ ] Animaciones de entrada con Framer Motion (o CSS puro)
+- [ ] Sistema multilenguaje
+
+---
+
+## 🙌 Créditos
+
+Proyecto desarrollado por Joan Gomez y Sergio Lievano como un homenaje y práctica profesional del desarrollo web moderno.
+
+🔗 Fuentes de datos: [SWAPI.dev](https://swapi.dev)  
+🎨 Diseño visual inspirado en el universo de Star Wars
+
+---
+
+## 💫 Que la Fuerza te acompañe
+
+> “Tu enfoque determina tu realidad.” — *Qui-Gon Jinn*
 
 
-## Estructura del Proyecto
-
-Star_Wars/
-├── index.html          
-├── css/
-│   ├── styles.css     
-├── js/
-│   ├── scripts.js      
-├── assets/
-│   ├── images/         
-│   ├── icons/         
-├── pages/
-│   ├── characters.html 
-│   ├── ships.html      
-│   ├── movies.html     
-├── README.md           
-
-## Cómo Ejecutar el Proyecto
-
-1. Clona este repositorio:
-   ```bash
-   git clone <URL-del-repositorio>
-
-2. Navega a la carpeta del proyecto
-   ```bash
-   cd Star_Wars
-
-3. Abre el archivo index.html en tu navegador para visualizar la página principal.
-
-4. Opcionalmente, puedes utilizar un servidor local para ejecutar el proyecto. Por ejemplo, con Python:
-   ```bash
-   python3 -m http.server
 
 
